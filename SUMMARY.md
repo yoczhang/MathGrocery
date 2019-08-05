@@ -16,7 +16,7 @@
 
 ---
 
-* [Sentences](./Sentences.md)
+* [Sentences](./Sentences/Sentences.md)
 
 
 
