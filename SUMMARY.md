@@ -20,6 +20,7 @@
 
 
 * [Programing](./Programing/Programing.md)
+  * [FEALPy](./Programing/FEALPy/FEALPy.md)
 
-* [FEALPy](./Programing/FEALPy/FEALPy.md)
+
 
