@@ -11,14 +11,14 @@
 
 ---
 
-### Programing
+### Program
 
 * [Programing](./Programing/Programing.md)
   * [FEALPy](./Programing/FEALPy/FEALPy.md)
 
 ---
 
-### Sentences
+### Sentence
 
 * [Sentences](./Sentences.md)
 
