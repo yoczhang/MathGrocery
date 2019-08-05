@@ -20,6 +20,8 @@
 
 ### Sentences
 
+* [Sentences](./Sentences.md)
+
 
 
 
