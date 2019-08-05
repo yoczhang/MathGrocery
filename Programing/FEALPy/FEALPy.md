@@ -2,5 +2,5 @@
 
 FEALPy is a finite element method analysis library in Python, the details see [FEALPy](https://github.com/weihuayi/fealpy).
 
-[//]: [FEALPy Basic](FEALPy_Basic.md)
+[^_^]:[FEALPy Basic](FEALPy_Basic.md)
 
