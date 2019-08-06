@@ -95,7 +95,7 @@ class DPLFEMDof1d(DPLFEMDof):
         return multiIndex
 ```
 
-where the usage of `super` function can be found in [Python super 函数详解](https://www.jianshu.com/p/6d7cce41dc65).
+where the usage of `super` function can be found in [Python super 函数详解](https://www.jianshu.com/p/6d7cce41dc65) and [python中的super函数及MRO](https://blog.csdn.net/m0_38063172/article/details/82250865).
 
 
 
