@@ -6,11 +6,11 @@ Some useful sentences in English.
 
 ##### 2019 (MC) Spectral approximation of elliptic operators by the Hybrid High-Order method.pdf
 
-1. `Lemma 3.2`: The example of jump notations in HHO.
+1. `Lemma 3.2`: The description of jump notations in HHO.
 
-    where ,  are the two mesh cells sharing .
+    $$[u_{\mathcal{K}}]_F= u_{K_1}|_F - u_{K_2}|_F$$ where $$K_1$$,  $$K_2$$ are the two mesh cells sharing $$F$$.
 
-2. Note that  depends on , but we just write  instead of  to alleviate the notation.
+2. Note that $$t$$ depends on $$\mu$$, but we just write $$t$$ instead of $$t_{\mu}$$ to alleviate the notation.
 
 
 
