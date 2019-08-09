@@ -8,7 +8,7 @@
 
 * [Basic theory](./BasicTheory/BasicTheory.md)
   * [Inequality](./BasicTheory/Inequality/Inequality.md)
-  * [EigenvalueProblem](./BasicTheory/Inequality/EigenvalueProblem.md)
+  * [EigenvalueProblem](./BasicTheory/EigenvalueProblem/EigenvalueProblem.md)
 
 ---
 
