@@ -99,3 +99,35 @@ where the usage of `super` function can be found in [Python super 函数详解](
 
 
 
+#### 4. Plot the mesh
+
+```python
+import matplotlib.pyplot as plt
+from fealpy.fem.PoissonFEMModel import PoissonFEMModel
+from fealpy.tools.show import showmultirate, show_error_table
+from fealpy.pde.poisson_2d import CosCosData as PDE
+
+d = 2
+n = 1
+pde = PDE()
+mesh = pde.init_mesh(n)
+from fealpy.mesh.mesh_tools import unique_row, find_node, find_entity, show_mesh_2d
+fig = plt.figure()
+axes = fig.gca()
+show_mesh_2d(axes,mesh)
+plt.show()
+
+## TODO:
+find_node(axes,mesh.node,showindex=True)
+```
+
+![fealpy_plotmesh0](/Users/yczhang/Documents/MathGrocery/Programing/FEALPy/fealpy_files/fealpy_plotmesh0.png){:height="50%" width="50%"}
+
+
+
+
+
+
+
+<img src="/Users/yczhang/Documents/MathGrocery/Programing/FEALPy/fealpy_files/fealpy_plotmesh0.png" style="width:10px height:10px" />
+
