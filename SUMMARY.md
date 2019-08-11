@@ -15,6 +15,7 @@
 ---
 
 * [Programing](./Programing/Programing.md)
+  * [Learning Python](./Programing/LearningPython/LearningPython.md)
   * [FEALPy](./Programing/FEALPy/FEALPy.md)
     * [FEALPy Basic](./Programing/FEALPy/FEALPy_Basic.md)
 
