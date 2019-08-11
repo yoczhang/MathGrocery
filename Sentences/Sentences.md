@@ -21,6 +21,7 @@ Some useful sentences in English.
 ##### 2018 (IMAJNA) Virtual Element Method for Second Order Elliptic Eigenvalue Problems.pdf
 
 1. For ease of exposition, we focus on the case of Dirichlet boundary conditions. The extension to other boundary conditions is analogous.
+2. Finally, the eigensolutions of the continuous and the discrete problems $(2.2)$ and $(4.8)$ are, respectively, related to the eigenmodes of operators $T$ and $T_h$ in the sense that the corresponding eigenvalues are inverses of each other and their eigenspaces coincide. By virtue of this correspondence, the convergence analysis can be derived from spectral approximation theory for compact operators.
 
 
 

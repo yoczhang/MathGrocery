@@ -7,6 +7,7 @@
 ---
 
 * [Basic theory](./BasicTheory/BasicTheory.md)
+  * [Something basically](./BasicTheory/SomethingBasically/Basically_1.md)
   * [Inequality](./BasicTheory/Inequality/Inequality.md)
   * [EigenvalueProblem](./BasicTheory/EigenvalueProblem/EigenvalueProblem.md)
 
