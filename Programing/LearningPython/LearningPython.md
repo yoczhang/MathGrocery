@@ -317,7 +317,7 @@ B = np.array([[0, 1, 0],
 
 现在，我们A和B是与之兼容形状的两个二维数组：
 
-![einsum_1d](LearningPython_fig/einsum_1d.png)
+![einsum_1d](LearningPython_fig/einsum_2d.png)
 
 当处理大量维度时，别忘了einsum允许使用省略号语法’…’。这提供了一种变量的方式标记我们不大感兴趣的轴，例如np.einsum(‘…ij,ji->…’, a, b)，仅将a的最后两个轴与2维数组b相乘。
 
