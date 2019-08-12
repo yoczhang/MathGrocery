@@ -349,7 +349,7 @@ einsum也可能不按顺序排列轴。文档重点强调了np.einsum(‘ji’, 
 
 ---
 
-### Python Numpy中reshape函数参数-1的含义
+### Python Numpy 中 reshape 函数参数 -1 的含义
 
 See: [Python Numpy中reshape函数参数-1的含义](https://blog.csdn.net/weixin_39449570/article/details/78619196)
 
