@@ -123,3 +123,41 @@ find_node(axes,mesh.node,showindex=True)
 
 ![fealpy_plotmesh0](fealpy_files/fealpy_plotmesh0.png)
 
+
+
+#### 6. Get barycentric points (bcs) 
+
+```pyth
+# ------------------------------------------------- #
+# --- project 1: get barycentric points (bcs)   --- #
+
+import numpy as np
+from fealpy.mesh.TriangleMesh import TriangleMesh
+
+# init mesh
+n = 1  # refine times
+
+node = np.array([
+    (0, 0),
+    (1, 0),
+    (1, 1),
+    (0, 1)], dtype=np.float)
+
+cell = np.array([(1, 2, 0), (3, 0, 2)], dtype=np.int)  # tri mesh
+
+mesh = TriangleMesh(node, cell)
+mesh.uniform_refine(n)
+
+# get bcs
+p = 1  # polynomial order of FEM space
+q = p+3  # integration order
+integrator = mesh.integrator(q)
+qf = integrator
+bcs, ws = qf.quadpts, qf.weights
+shape = bcs.shape
+
+print(shape)
+```
+
+
+
