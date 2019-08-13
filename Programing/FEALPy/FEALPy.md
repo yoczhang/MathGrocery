@@ -403,7 +403,7 @@ $$
 
 构造向量：
 $$
-P = ( \frac{1}{0!},  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!})
+P = ( \frac{1}{0!},  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!}) \quad \text{ maybe } \quad P = (  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!})
 $$
 
 构造矩阵：

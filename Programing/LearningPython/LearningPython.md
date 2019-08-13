@@ -8,7 +8,7 @@
 
 ## What is a[:2, :3] meaning?
 
-```py
+```python
 >>> import numpy as np
 >>> a = np.array([[11, 12, 13, 14, 15],
 ...               [16, 17, 18, 19, 20],
@@ -32,7 +32,7 @@ See: [What is :: (double colon) in Python?](https://stackoverflow.com/questions/
 
 i.e.,
 
-```pyt
+```python
 >>> a = [1,2,3,4,5,6,7,8,9]
 >>> a[::3]
 [1, 4, 7]
@@ -42,7 +42,7 @@ The additional syntax of `a[x::y]` means get every $$y^{th}$$ element starting a
 
 i.e.,
 
-```pyth
+```python
 >>> a[2::3]
 [3, 6, 9]
 ```
@@ -59,7 +59,7 @@ See:
 
 但是简单来说就是在 NumPy 的数组切片时, 它是省略所有的冒号 (:) 来用 `...` 代替, 即 `a[..., 0]` 代替 `a[:,:, 0]`. 例如下面的例子：
 
-```py
+```python
 >>> a = np.array([[[1],[2],[3]], [[4],[5],[6]]])
 >>> a.shape
 (2, 3, 1)
@@ -89,7 +89,7 @@ array([[1, 2, 3],
 
 可以先看一个例子
 
-```pyt
+```python
 >>> a = np.array([[11, 12, 13, 14, 15],
 ...                [16, 17, 18, 19, 20],
 ...                [21, 22, 23, 24, 25],
@@ -114,7 +114,7 @@ array([[[11, 12, 13, 14, 15]],
 
 将列的参数改成 `None`，输出的 `shape` 都变了. 这里大家要知道，`None` 代表新增加一个维度，它有一个别称叫 `newaxis`，大家可以输出一下 `numpy.newaxis` 查看一下
 
-```pyt
+```python
 >>> print(np.newaxis)
 None
 ```
@@ -123,7 +123,7 @@ None
 
 我们下面尝试在第三维上用 `None`:
 
-```pyt
+```python
 >>> c = a[..., None]
 >>> c.shape
 (5, 5, 1)
@@ -137,7 +137,7 @@ None
 
 ### 不同形式的构造向量
 
-```pyt
+```python
 >>> c = np.array([[2,1,3]])
 >>> c
 array([[2, 1, 3]])
@@ -169,7 +169,7 @@ array([[2],
 
 ### 三维数组的维数，切片
 
-```py
+```python
 >>> import numpy as np
 >>> a = np.arange(24).reshape(2,3,4)
 >>> a
@@ -211,7 +211,9 @@ array([[12, 14, 16, 18],
 
 
 
-### NumPy 中 einsum 的基本介绍
+---
+
+## NumPy 中 einsum 的基本介绍
 
 See: [NumPy中einsum的基本介绍](http://www.atyun.com/32288.html)
 
@@ -233,7 +235,7 @@ einsum函数是NumPy的中最有用的函数之一。由于其强大的表现力
 
 举一个函数的一个小例子，这里有两个数组，我们想要逐个元素相乘，然后沿轴1（数组的行）求和：
 
-```py
+```python
 A = np.array([0, 1, 2])
 
 B = np.array([[ 0,  1,  2,  3],
@@ -349,7 +351,7 @@ einsum也可能不按顺序排列轴。文档重点强调了np.einsum(‘ji’, 
 
 ---
 
-### Python Numpy 中 reshape 函数参数 -1 的含义
+## Python Numpy 中 reshape 函数参数 -1 的含义
 
 See: [Python Numpy中reshape函数参数-1的含义](https://blog.csdn.net/weixin_39449570/article/details/78619196)
 
@@ -392,6 +394,62 @@ See: [Python Numpy中reshape函数参数-1的含义](https://blog.csdn.net/weixi
 >>> print(z.reshape(2,-1))
 [[ 1  2  3  4  5  6  7  8]
  [ 9 10 11 12 13 14 15 16]]
+```
+
+---
+
+## Numpy.ufunc.accumulate()
+
+ufunc是universal function的缩写，意思是这些函数能够作用于narray对象的每一个元素上，而不是针对narray对象操作，numpy提供了大量的ufunc的函数。这些函数在对narray进行运算的速度比使用循环或者列表推导式要快很多，但请注意，在对单个数值进行运算时，python提供的运算要比numpy效率高。
+
+```python
+>>> import numpy as np
+>>> a = np.array([1, 3, 5])
+>>> a1 = np.add.accumulate(a)
+>>> a1
+array([1, 4, 9])
+>>> a2 = np.multiply.accumulate(a)
+>>> a2
+array([ 1,  3, 15])
+```
+
+---
+
+## Numpy 中 prod, cumprod, sum, cumsum
+
+`numpy.prod(a, axis, dtype, keepdims)`：返回指定轴上的数组元素的乘积。
+`numpy.sum(a, axis, dtype, keepdims)`：返回指定轴上的数组元素的总和。
+`numpy.cumprod(a, axis, dtype)`: 返回沿给定轴的元素的累积乘积。
+`numpy.cumsum(a, axis, dtype)`: 返回沿给定轴的元素的累积总和。
+
+```python
+def cumprod(a, axis=None, dtype=None, out=None):
+    """
+    Return the cumulative product of elements along a given axis.
+    Parameters
+    ----------
+    a : array_like
+        Input array.
+    axis : int, optional
+        Axis along which the cumulative product is computed.  By default
+        the input is flattened.
+    dtype : dtype, optional
+        Type of the returned array, as well as of the accumulator in which
+        the elements are multiplied.  If *dtype* is not specified, it
+        defaults to the dtype of `a`, unless `a` has an integer dtype with
+        a precision less than that of the default platform integer.  In
+        that case, the default platform integer is used instead.
+    out : ndarray, optional
+        Alternative output array in which to place the result. It must
+        have the same shape and buffer length as the expected output
+        but the type of the resulting values will be cast if necessary.
+        # 用于放置结果的备选输出数组。
+        # 它必须具有与预期输出相同的形状和缓冲区长度，但是如果需要，将转换结果值的类型。
+    Returns
+    -------
+    cumprod : ndarray
+        A new array holding the result is returned unless `out` is
+        specified, in which case a reference to out is returned.
 ```
 
 
