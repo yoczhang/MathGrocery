@@ -403,7 +403,7 @@ $$
 
 构造向量：
 $$
-P = ( \frac{1}{0!},  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!}) \quad \text{ maybe } \quad P = (  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!})
+P = ( \frac{1}{0!},  \frac{1}{1!}, \frac{1}{2!}, \cdots, \frac{1}{p!})
 $$
 
 构造矩阵：
@@ -494,8 +494,9 @@ plt.tight_layout(pad=1, w_pad=1, h_pad=1.0)
 plt.show()
 ```
 
-
 ![png](fealpy_files/fealpy_38_0.png)
+
+In the code: `phi.shape = [Nphi x Nlambda]` where `Nphi` is the `number of phi on one cell` and `Nlambda` is the number of `bcs (barycentric points) on all cells `.
 
 
 ### 3.4 基函数梯度的计算公式
