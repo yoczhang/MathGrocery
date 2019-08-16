@@ -1,6 +1,8 @@
 # Eigenvalue Problems
 
-**Ref: 2018 (IMAJNA) Virtual Element Method for Second Order Elliptic Eigenvalue Problems.pdf.**
+## Basci theory
+
+Ref: 2018 (IMAJNA) Virtual Element Method for Second Order Elliptic Eigenvalue Problems.pdf.
 
 We are interested in the problem of computing the eigenvalues of the Laplace operator, namely finding $$\lambda\in\mathbb{R}$$ such that there exists $$u$$, with $$\lVert u\rVert_0 =1$$, satisfying
 $$
@@ -36,3 +38,8 @@ Due to regularity results [^(Agmon, 1965)], there exists a constant $$r>\frac{1}
 
 
 [^(Agmon, 1965)]: *Lectures on Elliptic Boundary Value Problems*.
+
+---
+
+## How to treat the boundary condition in code
+
