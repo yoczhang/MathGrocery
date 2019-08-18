@@ -2,7 +2,7 @@
 
 ## Procedure
 
-exampleRate
+The procedure of FEALPy
 
 ```mermaid
 graph LR;
