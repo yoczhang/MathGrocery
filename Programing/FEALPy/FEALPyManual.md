@@ -1,5 +1,16 @@
 # FEALPy manual
 
+## Procedure
+
+exampleRate
+
+```mermaid
+graph LR;
+  exampleRate --> exampleFEMModel
+  exampleFEMModel --> exampleSpace
+  exampleSpace --> exampleDof
+```
+
 ## Mesh 
 
 ```python
