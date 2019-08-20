@@ -44,7 +44,7 @@
         "anchor-navigation-ex@0.1.8",
         "favicon@^0.0.2",
         "todo@^0.1.3",
-        "3-ba@^0.9.0",
+        "-3-ba@^0.9.0",
         "terminal@^0.3.2",
         "alerts@^0.2.0",
         "include-csv@^0.1.0",
@@ -64,7 +64,7 @@
             "showLevel": true
         },
         "disqus": {
-            "shortName": "gitbookuse"
+            "shortName": "Math grocery"
         },
         "prism": {
             "css": [
@@ -111,12 +111,9 @@
            ]
        },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © yongchao 2019",
+            "copyright": "Copyright © 2019",
             "modify_label": "Last modified：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
-        },
-        "3-ba": {
-            "token": "ff100361cdce95dd4c8fb96b4009f7bc"
         },
         "donate": {
             "wechat": "https://zhangjikai.com/resource/weixin.png",
