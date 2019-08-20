@@ -24,5 +24,9 @@
 
 ---
 
+## Verifying Numerical Convergence Rates
+
+One can find the details paper in `NutstoreSync/PAPERS/Basics/.`
+
 
 
