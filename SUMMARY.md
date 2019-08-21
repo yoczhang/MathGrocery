@@ -24,6 +24,7 @@
 	  * [10. Numpy 中 prod, cumprod, sum, cumsum](./Programing/LearningPython/subLearningPy/10.md)
 	  * [11. Numpy 矩阵乘法 `multiply()`, `dot()`, `matmul()`, `*`, `@` 的用法](./Programing/LearningPython/subLearningPy/11.md)
       * [12. Python 装饰器 (decorator) @ 用法](./Programing/LearningPython/subLearningPy/12.md)
+      * [13. Python lambda 函数](./Programing/LearningPython/subLearningPy/13.md)
     * [FEALPy](./Programing/FEALPy/FEALPy.md)
         * [FEALPy Basic](./Programing/FEALPy/FEALPy_Basic.md)
     * [FEALPy Manual](./Programing/FEALPy/FEALPyManual.md)
