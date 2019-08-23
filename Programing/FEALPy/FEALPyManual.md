@@ -14,6 +14,8 @@ graph LR;
 ## Mesh 
 
 ```python
+from fealpy.mesh.TriangleMesh import TriangleMesh
+
 node = np.array([
     (0, 0),
     (1, 0),

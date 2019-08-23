@@ -67,7 +67,7 @@ $$
   $$
   Where $$\mathbf{x}_E$$ is the barycenter of $$E$$, which is defined by $$\mathbf{x}_E = \frac{1}{|E|} \int_E\mathbf{x} \,\mathrm d\mathbf{x}$$. 
 
-  From the definition of $$m_{\pmb{\alpha}}$$, we know that $$m_{\pmb{\alpha}}$$ is the **homogeneous polynomial**.
+  From the definition of $$m_{\pmb{\alpha}}$$, we know that $$m_{\pmb{\alpha}}$$ is the $$|\pmb{\alpha}|$$ **homogeneous polynomial**.
 
 
 
@@ -75,7 +75,7 @@ $$
 
 #### 一般函数
 
-多边形 $$E$$，假设它有 $$n$$ 个按逆时针排序的顶点 $$\{\mathbf{x}_i\}_{i=0}^{n-1}$$ , $$n$$ 条边 $$\{e_i:=(\mathbf{x}_i,\mathbf{x}_{i+1})\}_{i=0}^{n-1}$$  (注意这里假定 $$\mathbf{x}_n = \mathbf{x}_0$$)，第 $$i$$ 条边  $$e_i$$ 上的单位外法向量记为 $$\mathbf{n}_i$$。给定一个定义在多边形 $E$ 上的齐次函数 $f(\mathbf x)$, 记 
+多边形 $$E$$，假设它有 $$n$$ 个按逆时针排序的顶点 $$\{\mathbf{x}_i\}_{i=0}^{n-1}$$ , $$n$$ 条边 $$\{e_i:=(\mathbf{x}_i,\mathbf{x}_{i+1})\}_{i=0}^{n-1}$$  (注意这里假定 $$\mathbf{x}_n = \mathbf{x}_0$$)，第 $$i$$ 条边  $$e_i$$ 上的单位外法向量记为 $$\mathbf{n}_i$$。给定一个定义在多边形 $E$ 上的 $$q$$ 次齐次函数 $$f(\mathbf x)$$, 记 
 $$
 \mathbf F: = \mathbf x f(\mathbf x)
 $$
@@ -100,11 +100,19 @@ $$
 $$
 
 另一方面
-
+$$
+\begin{align}
+\int_{\partial E} (\mathbf x\cdot \mathbf n)  f(\mathbf x)\mathrm ds =& \sum_{e_i\in\partial E}\int_{e_i} (\mathbf x\cdot \mathbf n_i)  f(\mathbf x)\mathrm ds\\
+=& \sum_{e_i\in\partial E}\int_{e_i} [(\mathbf x - \mathbf x_i + \mathbf x_i)\cdot \mathbf n_i] f(\mathbf x)\mathrm ds\\
+=& \sum_{e_i\in\partial E}\int_{e_i} (\mathbf x_i\cdot \mathbf n_i)  f(\mathbf x)\mathrm ds\\
+=& \sum_{e_i\in\partial E}(\mathbf x_i\cdot \mathbf n_i)\int_{e_i} f(\mathbf x)\mathrm ds\\
+\end{align}
+$$
 最后我们可以到得到 $$(q+2) \int_E f(\mathbf x)\mathrm d \mathbf x = \sum_{e_i\in\partial E}(\mathbf x_i\cdot \mathbf n_i)\int_{e_i} f(\mathbf x)\mathrm ds$$，即
 $$
 \int_E f(\mathbf x)\mathrm d \mathbf x = \frac{1}{(q+2)} \sum_{e_i\in\partial E}(\mathbf x_i\cdot \mathbf n_i)\int_{e_i} f(\mathbf x)\mathrm ds .
 $$
+
 
 
 #### The scaled $$2D$$ monomial polynomials on polygon $$E$$
