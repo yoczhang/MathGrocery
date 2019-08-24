@@ -43,9 +43,9 @@ array([0.27777778, 0.44444444, 0.27777778])
   - If we set `oneEdgeNode = allEdgeNode[i,:,:]`, `[2 x 2]`, this gives us the $$i$$-th edge's vertices coordinates, such as, `oneEdgeNode[0,:]` is the **first** vertex's $$(x_0,y_0)$$-coordinate of $$i$$-th edge, and `oneEdgeNode[1,:]` is the **second** vertex's $$(x_1,y_1)$$-coordinate of $$i$$-th edge. So 
     $$
     \begin{align}
-    \begin{bmatrix} (t) \ \ (1-t) \end{bmatrix}
-    \begin{bmatrix} (x_0) \ \ (y_0)\\ (x_1) \ \ (y_1) \end{bmatrix} = 
-    \begin{bmatrix} (x_0)(t)+(x_1)(1-t) \ \ \  (y_0)(t)+(y_1)(1-t)\end{bmatrix}
+    &\begin{bmatrix} (t) \ \ (1-t) \end{bmatrix}
+    \begin{bmatrix} (x_0) \ \ (y_0)\\ (x_1) \ \ (y_1) \end{bmatrix} \\
+    =& \begin{bmatrix} (x_0)(t)+(x_1)(1-t) \ \ \  (y_0)(t)+(y_1)(1-t)\end{bmatrix}
     \end{align}
     $$
 
