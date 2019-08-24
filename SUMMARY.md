@@ -31,6 +31,8 @@
     * [FEALPy](./Programing/FEALPy/FEALPy.md)
         * [FEALPy Basic](./Programing/FEALPy/FEALPy_Basic.md)
     * [FEALPy Manual](./Programing/FEALPy/FEALPyManual.md)
+        * [Mesh](./Programing/FEALPy/subFEALPyManual/Mesh.md)
+        * [Quadrature](./Programing/FEALPy/subFEALPyManual/Quadrature.md)
 
 -----
 * [Sentences](./Sentences/Sentences.md)
