@@ -20,4 +20,20 @@
 
 
 
+### hho-book (Chapter 1. Setting)
+
+- Lemma 1.17 (Characterisation of $$\pmb W^p(\rm div;\Omega)$$). Let a real number $$p\in[1,\infty]$$ be fixed, and let $$\pmb \tau\in W^{1,p}(\mathcal T_h)^d$$. Then, $$\pmb \tau\in \pmb W^p(\rm div;\Omega)$$ if and only if 
+  $$
+  [\pmb \tau]_F\cdot \pmb n_F = 0 \qquad F\in\mathcal F_h^i.
+  $$
+  Proof: See hho-book for details.
+
+- Lemma 1.21 (Characterisation of $$W^{1.p}(\Omega)$$). Let a real number $$p\in[1,\infty]$$ be fixed. Then, a function $$v\in W^{1,p}(\mathcal T_h)$$ if and only if 
+  $$
+  [v]_F = 0 \qquad F\in \mathcal F_h^i
+  $$
+  Proof: See hho-book for details.
+
+
+
 
