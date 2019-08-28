@@ -8,6 +8,7 @@
     * [Function analysis](./BasicTheory/FunctionAnalysis/FunctionAnalysis.md)
     * [Inequality](./BasicTheory/Inequality/Inequality.md)
     * [Eigenvalue problem](./BasicTheory/EigenvalueProblem/EigenvalueProblem.md)
+    * [Optimization methods](./BasicTheory/OptimizationMethods/OptimizationMethods.md)
 
 -----
 * [Programing](./Programing/Programing.md)

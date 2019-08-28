@@ -9,21 +9,27 @@
 
 ---
 
-## 最速下降法
+## <a href="#梯度下降">梯度下降</a>
 
 在此方法中，我们关心的是让**目标函数值** $$f(\bf x)$$ 最快速"下降"，也就是说在 $$V$$ 中的一个点 $$\mathbf x_k$$ 移动到另一个点 $$\mathbf x_{k+1} = (\mathbf x_k + \alpha \mathbf d)$$ 之后 ($$\alpha,\ \mathbf d$$ 的含义在下面)，**目标函数值**的改变情况。
 
-首先我们通过 Taylor 展开
+首先我们通过 $$f(\mathbf x_{k+1})$$ 在 $$\mathbf x_k$$ 处 Taylor 展开
 $$
-f(\mathbf x_k + \alpha \mathbf d) = f(\mathbf x_k) + \alpha \mathbf g_k^T \mathbf d + o(\alpha^2), \tag{1.1}
+f(\mathbf x_k + \alpha \mathbf d) = f(\mathbf x_k) + \alpha \mathbf g_k \cdot \mathbf d + o(\alpha^2), \tag{1.1}
 $$
 where
 
 - $$\mathbf x_k$$: stands for the $$k$$-th variable (a vector);
-- $$\mathbf d$$: stands for the  (a vector), i.e., $$|\mathbf d| = 1$$;
+- $$\mathbf d$$: stands for the (a vector), i.e., $$|\mathbf d| = 1$$;
 - $$\alpha$$: stands for the step (a scalar);
 - $$\mathbf g_k = \nabla f(\mathbf x_k)$$: the gradient of $$f$$ at $$\mathbf x_k$$;
-- 
+- $$o(\alpha^2)$$: the higher order infinitesimal of $$\alpha$$.
+
+We omit the $$o(\alpha^2)$$, and if we want $(1.1)$ to get the minimum value, we just let $$\alpha \mathbf g_k \cdot \mathbf d$$ be minimum. Note that $$\mathbf g_k$$ and $$\mathbf d$$ are vectors, so $$\mathbf g_k \cdot \mathbf d = |\mathbf g_k||\mathbf d|\cos\theta =|\mathbf g_k|\cos\theta $$ ($$\theta$$ is the angle between $$\mathbf g_k$$ and $$\mathbf d$$). So when $$\theta = \pi$$, i.e., $$\mathbf d = \frac{\mathbf g_k}{|\mathbf g_k|}$$, $$\mathbf g_k \cdot \mathbf d$$ get the minimum value: $$-|\mathbf g_k|$$. Thus, $(1.1)$ get the minimum value.
+
+---
+
+## 牛顿迭代
 
 
 
