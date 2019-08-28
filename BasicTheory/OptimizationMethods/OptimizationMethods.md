@@ -7,7 +7,12 @@ This paper is from [最速下降法/steepest descent，牛顿法/newton，共轭
 我们设定
 
 - The space: $$V = \{\bf x| \bf{x} \in \mathbb R^n \} $$ or $$V = H_0^1(\Omega)$$;
+
 - The objective function: $$f(\mathbf x): V \rightarrow \mathbb R$$;
+
+- [Line search](https://en.wikipedia.org/wiki/Line_search): In optimization, the line search strategy is one of two basic iterative approaches to find a local minimum $$\mathbf x^*$$ of an objective function $$f$$. The other approach is trust region.
+
+  The line search approach first finds a descent direction along which the objective function $$f$$ will be reduced and then computes a step size that determines how far $$\mathbf x$$ should move along that direction. The descent direction can be computed by various methods, such as gradient descent, Newton's method and quasi-Newton method. The step size can be determined either exactly or inexactly. 
 
 则我们要求的是 (目前我们先考虑无约束极值)
 $$
@@ -39,6 +44,7 @@ We omit the $$o(\alpha^2)$$, and if we want $(1.1)$ to get the minimum value, we
 
 - 梯度下降法的收敛性：对一般的目标函数是整体收敛的 (所谓整体收敛，是指不会非要在某些点附近的范围内，才会有好的收敛性)。
 - 梯度下降法的收敛速度：至少是线性收敛的。
+- 判断最终迭代结束的条件可选为：$$|\nabla f(\mathbf x_{k+1})|< tol$$.
 
 
 
