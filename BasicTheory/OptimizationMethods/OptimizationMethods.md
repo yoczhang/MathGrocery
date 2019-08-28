@@ -9,7 +9,7 @@
 
 ---
 
-## <a href="#梯度下降">梯度下降</a>
+## 梯度下降
 
 在此方法中，我们关心的是让**目标函数值** $$f(\bf x)$$ 最快速"下降"，也就是说在 $$V$$ 中的一个点 $$\mathbf x_k$$ 移动到另一个点 $$\mathbf x_{k+1} = (\mathbf x_k + \alpha \mathbf d)$$ 之后 ($$\alpha,\ \mathbf d$$ 的含义在下面)，**目标函数值**的改变情况。
 
@@ -29,7 +29,13 @@ We omit the $$o(\alpha^2)$$, and if we want $(1.1)$ to get the minimum value, we
 
 ---
 
-## 牛顿迭代
+## 牛顿法
+
+[梯度下降](#梯度下降)只用到了梯度信息，即目标函数的一阶导数信息，并且在推导[梯度下降](#梯度下降)方法时，是通过 $$f(\mathbf x_{k+1})$$ 在 $$\mathbf x_k$$ 处 Taylor 展开得到的。而[牛顿法](#牛顿法)首先会用到目标函数的二阶导数信息，并且在推导的过程中是首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开，然后再对  $$f(\mathbf x)$$ 展开后的两端求极小值问题，我们具体来看
+
+首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开
+
+
 
 
 
