@@ -34,9 +34,9 @@ We omit the $$o(\alpha^2)$$, and if we want $(1.1)$ to get the minimum value, we
 [梯度下降](#梯度下降)只用到了梯度信息，即目标函数的一阶导数信息，并且在推导[梯度下降](#梯度下降)方法时，是通过 $$f(\mathbf x_{k+1})$$ 在 $$\mathbf x_k$$ 处 Taylor 展开得到的。而[牛顿法](#牛顿法)首先会用到目标函数的二阶导数信息，并且在推导的过程中是首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开，然后再对  $$f(\mathbf x)$$ 展开后的两端求极小值问题，我们具体来看
 
 首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开
-
-
-
+$$
+f(\mathbf x) = f(\mathbf x_k) + \mathbf g_k^T(\mathbf x-\mathbf x_k) + \frac{1}{2}(\mathbf x-\mathbf x_k)^T\mathbf G_k (\mathbf x-\mathbf x_k), \tag{1.2}
+$$
 
 
 
