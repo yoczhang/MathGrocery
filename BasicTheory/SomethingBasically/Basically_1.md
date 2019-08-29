@@ -19,8 +19,9 @@
 3. The stiff-matrix and mass-matrix have the following scales:
 
    * $$(m_i,m_j)_E \simeq h_E^d$$;
+* $$(\nabla m_i, \nabla m_j)_E \simeq h_E^{d-2}$$.
 
-   * $$(\nabla m_i, \nabla m_j)_E \simeq h_E^{d-2}$$.
+
 
 ---
 
