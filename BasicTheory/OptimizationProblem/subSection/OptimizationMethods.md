@@ -14,7 +14,7 @@ This paper is from [最速下降法/steepest descent，牛顿法/newton，共轭
 
   The line search approach first finds a descent direction along which the objective function $$f$$ will be reduced and then computes a step size that determines how far $$\mathbf x$$ should move along that direction. The descent direction can be computed by various methods, such as gradient descent, Newton's method and quasi-Newton method. The step size can be determined either exactly or inexactly. 
   
-  **(This part needs to be rewrite, see https://blog.csdn.net/zcgr_gzgy/article/details/11809847 and https://wenku.baidu.com/view/3e9c513f8f9951e79b89680203d8ce2f01666569.html?rec_flag=default&sxts=1567190473850 for the meaning of Line search).**
+  **(This part needs to be rewrite, see [最优化理论学习笔记_1(精确线性搜索)](https://blog.csdn.net/zcgr_gzgy/article/details/11809847) and [最优化理论与算法(六)一维搜索](https://wenku.baidu.com/view/3e9c513f8f9951e79b89680203d8ce2f01666569.html?rec_flag=default&sxts=1567190473850) for the meaning of Line search).**
 
 则我们要求的是 (目前我们先考虑无约束极值)
 $$
