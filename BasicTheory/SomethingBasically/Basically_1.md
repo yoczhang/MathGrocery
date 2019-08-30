@@ -27,7 +27,7 @@
 
 ## Verifying Numerical Convergence Rates
 
-One can find the details paper in `NutstoreSync/PAPERS/Basics/.`
+One can find the details paper in `NutstoreSync/PAPERS/Basics/`, which named as "Verifying Numerical Convergence Rates.pdf".
 
 
 
