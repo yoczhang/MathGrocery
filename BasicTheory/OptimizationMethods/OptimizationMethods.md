@@ -19,7 +19,6 @@ $$
 \min_{\mathbf x\in V} f(\mathbf x).
 $$
 
-
 ---
 
 ## 梯度下降法
@@ -136,7 +135,24 @@ $$
    > \mathbf g_{k+1}^T \mathbf d_k = 0 \quad k = 0, 1, ..., k
    > $$
 
+   在这个 $$\mathbf g_{k+1}^T \mathbf d_k = 0$$ 式子中，当 $$\mathbf g$$ 的下标是 $$k+1$$ 时，$$\mathbf d$$ 的下标可以是 $$0,1,...,k$$，例如，$$\mathbf g_{3}^T \mathbf d_2 = 0$$，$$\mathbf g_{3}^T \mathbf d_1 = 0$$，$$\mathbf g_{3}^T \mathbf d_0 = 0$$，这表明，当前迭代点的梯度 $$\mathbf g_3$$ 与前面所有的搜索方向 ($$\mathbf d_0, \mathbf d_1, \mathbf d_2$$) 正交。
+
    
+
+   一般的书中可能会用一种更加抽象的语言来描述，例如
+
+   > 共轭方向法在迭代过程中的每一个迭代点 $$\mathbf x_{i+1}$$ 都是目标函数 $$f(\mathbf x)$$ 在 $$\mathbf x_0$$ 和方向 $$\mathbf d_0, \mathbf d_1,...,\mathbf d_i,$$ 所张成的线性流形
+   > $$
+   > \Big\{ \mathbf x | \mathbf x = \mathbf x_0 + \sum_{j=0}^{i} \alpha_j \mathbf d_j, \ \forall \alpha_j \Big\}
+   > $$
+   > 中的极小点。
+
+   其实这个晦涩的描述，是 **line search 基础定理 (梯度与方向的点积为零)** 的另一种表述。我们拿一个特例来说：
+   迭代点 x2
+   （此时 i=1 ）是目标函数 f(x) 和方向 d0,d1 所张成的线性流形 {x|x=x0+α0d0+α1d1}
+   的极小值点。
+   而 x0+α0d0+α1d1=x1+α1d1=x2
+   ，所以这就说明了 x1 是在 d0 方向上line search得到的极小值点， x2 是在 d1 方向上line search得到的极小值点。所以由基础定理可知，当前迭代点的梯度与前面所有方向的点积为零。
 
    
 
