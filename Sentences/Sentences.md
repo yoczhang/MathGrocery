@@ -31,13 +31,17 @@ Some useful sentences in English.
 
 ## 1. 为了简单, 在不引起歧义的情况下, 我们去掉脚标
 
-- hho-book
+- hho-book:
 
   Whenever no ambiguity can arise, we omit both the dependence on $$\pmb x$$ and on the measure from integrals, and simply write $$\int_X v$$.
 
-- 2016 (JSC) Direct Discontinuous Galerkin Method and Its Variations for Second Order Elliptic Equations
+- 2016 (JSC) Direct Discontinuous Galerkin Method and Its Variations for Second Order Elliptic Equations: 
 
   With no ambiguity, for the rest of this article we use same letter $$u$$ instead of notation $$u_h$$ to represent DG numerical solution.
+
+- 2015 (ChenLong CMA) An auxiliary space multigrid preconditioner for the weak Galerkin method:
+
+  Therefore, later in the paper, we often identify these two if it cause no ambiguity.
 
 
 
