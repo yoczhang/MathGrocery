@@ -2,7 +2,7 @@
 
 Some useful sentences in English.
 
-# Paper1
+## Paper1
 
 ##### 2019 (MC) Spectral approximation of elliptic operators by the Hybrid High-Order method.pdf
 
@@ -16,7 +16,7 @@ Some useful sentences in English.
 
 ---
 
-# Paper2
+## Paper2
 
 ##### 2018 (IMAJNA) Virtual Element Method for Second Order Elliptic Eigenvalue Problems.pdf
 
@@ -26,4 +26,10 @@ Some useful sentences in English.
 
 
 ---
+
+# 分类
+
+## 1. 为了简单, 在不引起歧义的地方, 我们去掉脚标
+
+
 
