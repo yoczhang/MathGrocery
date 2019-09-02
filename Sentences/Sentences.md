@@ -43,5 +43,9 @@ Some useful sentences in English.
 
   Therefore, later in the paper, we often identify these two if it cause no ambiguity.
 
+- 2004 A Discontinuous Galerkin Method With Nonoverlapping Domain Decomposition for The Stokes and Navier-Stokes Problems:
+
+  If $$\mathcal O = \Omega$$ and if there is no ambiguity, we simply write $$||\cdot||_k$$ (resp. $$|\cdot|_k$$).
+
 
 
