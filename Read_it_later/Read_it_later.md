@@ -1,5 +1,15 @@
 # Read it later
 
+---
+
+---
+
+[TOC]
+
+---
+
+---
+
 ## Aim
 
 有时候查文献时遇到了一些知识点，但是当时又没有时间来看，那么就放下了，时间长了也就忘记了。所以这个文档的作用就是
@@ -10,15 +20,17 @@
   - paper 在电脑上保存的名称；
   - paper 简要的内容.
 
-
+---
 
 ## Paper: Read it later
+
+
 
 ### 2018 (Paul notes) Differential Equations
 
 介绍 Differential Equations 比较简要
 
-
+---
 
 ### hho-book (Chapter 1. Setting)
 
@@ -36,7 +48,7 @@
 
 
 
-
+---
 
 ### Lecture 6 Integration error for Lagrange finite elements
 
@@ -47,6 +59,18 @@
   \inf_{v\in \mathbb P_{m-1}}\Vert u-v \Vert_{W^{k,p}(\Omega)} \leq C |h|^{m-k} |u|_{W^{m,p}(\Omega)}.
   $$
   
+
+
+
+---
+
+### 2004 Theory and Practice of Finite Elements (Alexandre Ern)
+
+- 仔细阅读第一章 `Chapter 1. Finite Element Interpolation` 介绍了各种有限元空间 (such as: CR, RT, Nedelec), 以及各种插值 (such as: Scott-Zhang interpolation). 
+
+
+
+---
 
 
 
