@@ -37,3 +37,23 @@
 
 
 
+
+### Lecture 6 Integration error for Lagrange finite elements
+
+- The Bramble-Hilbert lemma: used in Lagrange finite elements error analysis.
+
+  Let $$u\in W^{m,p}(\Omega)$$ with $$0\leq k \leq m$$. Then
+  $$
+  \inf_{v\in \mathbb P_{m-1}}\Vert u-v \Vert_{W^{k,p}(\Omega)} \leq C |h|^{m-k} |u|_{W^{m,p}(\Omega)}.
+  $$
+  
+
+
+
+
+
+
+
+
+
+
