@@ -128,7 +128,20 @@ $$
 
      ---
 
-   - Let $$e$$ be an interior edge in the trianglulation $$\mathcal T$$ with nodes $$x_i$$ and $$x_j$$, and shared by two triangles $$\tau_1$$ and $$\tau_2$$. Denoted 
+   - Let $$e$$ be an interior edge in the trianglulation $$\mathcal T$$ with nodes $$x_i$$ and $$x_j$$, and shared by two triangles $$\tau_1$$ and $$\tau_2$$. Denoted the angle in $$\tau$$ oppositing to $$e$$ by $$\theta_e^\tau$$. Then prove that the entry $$a_{ij}= \int_\Omega\nabla\phi_i\cdot\nabla\phi_j {\rm d}x$$ is
+     $$
+     \begin{align}
+     & a_{ij} = -\frac{1}{2}(\cot\theta_e^{\tau_1}+\cot\theta_e^{\tau_2}), \\
+     & \cot\alpha + \cot\beta = \frac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta} = \frac{\sin(\pi-(\alpha+\beta))}{\sin\alpha\sin\beta}
+     \end{align}.
+     $$
+     Consequently $$a_{ij}\leq 0$$ if and only if $$\theta_e^{\tau_1} + \theta_e^{\tau_2} \leq \pi$$. By the way, if a 2-D triangulation satisfying $$\theta_e^{\tau_1} + \theta_e^{\tau_2} \leq \pi$$, it is called a Delaunay triangulation.
+
+     **Proof**: This proof is straightforward.
+
+     ---
+
+   - In this exercise, we compute the singular values of 
 
 
 
