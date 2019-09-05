@@ -141,7 +141,43 @@ $$
 
      ---
 
-   - In this exercise, we compute the singular values of 
+3. In this exercise, we compute the singular values of the affine map from the reference triangle $$\hat{\tau}$$ sapnned  by $$\hat{a}_1=(1,0), \hat{a}_2=(0,1) $$ and $$\hat{a}_3=(0,0)$$ to a triangle $$\tau$$ with three vertices $$a_i, i = 1,2,3$$. One of such affine map is to mathc the local indices of three vertices, i.e., $$F(\hat{a}_i) = a_i, i = 1,2,3$$:
+   $$
+   F(\hat{\pmb x}) = B^\intercal (\hat{\pmb x}) + c,
+   $$
+   where 
+   $$
+   B = \begin{bmatrix}
+   x_1-x_3 \quad y_1-y_3 \\
+   x_2-x_3 \quad y_2-y_3
+   \end{bmatrix}, \quad \text{and} \quad c = (x_3,y_3)^\intercal.
+   $$
+
+   - Estimate the $$\sigma_{\max}(B)$$ and $$\sigma_{\min}(B)$$ in the terms of edge lengthes and angles of the triangle $$\tau$$.
+
+     **Proof**: Google the eigenvalue of local stiffness matrix or properties of stiffness matrix.
+
+   - Establish inequalities between $$\Vert\nabla v\Vert_{0,\tau}$$ and $$\Vert\hat\nabla \hat v\Vert_{0,\hat \tau}$$ where $$\hat v(\hat{\pmb x}):= v(F(\hat{\pmb x}))$$.
+
+     **Proof**:
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
