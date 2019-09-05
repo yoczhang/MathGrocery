@@ -153,9 +153,15 @@ $$
    \end{bmatrix}, \quad \text{and} \quad c = (x_3,y_3)^\intercal.
    $$
 
-   - Estimate the $$\sigma_{\max}(B)$$ and $$\sigma_{\min}(B)$$ in the terms of edge lengthes and angles of the triangle $$\tau$$.
+   - Estimate the $$\sigma_{\max}(B)$$ and $$\sigma_{\min}(B)$$ in the terms of edge lengthes and angles of the triangle $$\tau$$. (What's more, one should note that condition number of $$B$$ =  $$\frac{\sigma_{\max}(B)}{\sigma_{\min}(B)}$$).
 
      **Proof**: Google the eigenvalue of local stiffness matrix or properties of stiffness matrix.
+
+     Or [Eigenvalues of a stiffness matrix](https://flexiblepolyhedron.wordpress.com/all-about-flexible-polyhedrons/introduction/eigenvalues-of-a-stiffness-matrix/).
+     $$
+     B\pmb x = \lambda\pmb x \rightarrow \lambda = \frac{\pmb x^\intercal B \pmb x}{\pmb x^\intercal  \pmb x}.
+     $$
+     
 
    - Establish inequalities between $$\Vert\nabla v\Vert_{0,\tau}$$ and $$\Vert\hat\nabla \hat v\Vert_{0,\hat \tau}$$ where $$\hat v(\hat{\pmb x}):= v(F(\hat{\pmb x}))$$.
 

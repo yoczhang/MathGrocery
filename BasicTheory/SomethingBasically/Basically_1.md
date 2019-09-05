@@ -28,17 +28,17 @@
 
      
 
-4. So if we directly use the non-scaled basis such as: 
+4. ~~So if we directly use the non-scaled basis such as:~~ 
    $$
    \begin{align}
    & \phi_i \in \{ 1, x, y\} \text{ in DG}; \\
    & \phi_i \in \{ x, y, 1-x-y\} \text{ in FEM}.
    \end{align}
    $$
-   The sitff-matirx and mass-matrix have the following scales:
+   ~~The sitff-matirx and mass-matrix have the following scales:~~
 
-   - $$(\nabla\phi_i,\nabla\phi_j)_E \simeq h_E^d $$;
-   - $$(\phi_i,\phi_j)_E \simeq h_E^{d+2}$$.
+   - ~~$$(\nabla\phi_i,\nabla\phi_j)_E \simeq h_E^d $$;~~
+   - ~~$$(\phi_i,\phi_j)_E \simeq h_E^{d+2}$$.~~
 
    
 
