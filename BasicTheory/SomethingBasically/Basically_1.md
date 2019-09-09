@@ -69,3 +69,42 @@ One can find the details paper in `NutstoreSync/PAPERS/Basics/`, which named as 
 
 
 
+---
+
+## curl
+
+- In 2D, $$\pmb v = (v_1,v_2)$$, we also sometimes use $$\rm rot$$ standsfor curl in 2D,
+  $$
+  {\rm curl}\,\pmb v = \left| \begin{array}{cc}
+  \partial_x & \partial_y \\ 
+   v_1 & v_2
+  \end{array} \right| = \partial_x v_2 - \partial_y v_1.
+  $$
+
+- In 3D, $$\pmb v = (v_1,v_2, v_3)$$, 
+  $$
+  {\rm curl}\,\pmb v = \left| \begin{array}{ccc}
+  \pmb i & \pmb j & \pmb k \\
+  \partial_x & \partial_y & \partial_z \\ 
+   v_1 & v_2 & v_3
+  \end{array} \right| = \pmb i \left| \begin{array}{cc}
+  \partial_y & \partial_z \\ 
+   v_2 & v_3
+  \end{array} \right| - \pmb j \left| \begin{array}{cc}
+  \partial_x & \partial_z \\ 
+   v_1 & v_3
+  \end{array} \right| + \pmb k \left| \begin{array}{cc}
+  \partial_x & \partial_y \\ 
+   v_1 & v_2
+  \end{array} \right|,
+  $$
+  where $$\pmb i, \pmb j, \pmb k$$ is the coordinate vectors in space.
+
+  
+
+---
+
+
+
+
+
