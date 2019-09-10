@@ -57,7 +57,14 @@
 
 
 
+---
 
+## Clockwise and anticlockwise $$90^\circ$$ rotation
+
+In 2D, let $$\pmb v = (v_1,v_2)$$, then
+
+- clockwise $$90^\circ$$ rotation of $$\pmb v$$: $$(v_2, -v_1)$$;
+- anticlockwise $$90^\circ$$ rotation of $$\pmb v$$: $$(-v_2, v_1).$$
 
 
 
