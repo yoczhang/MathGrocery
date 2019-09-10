@@ -42,7 +42,7 @@
 
    
 
-5. n the FEM triangle mesh, we have compute the stiff-matrix by using the barycentric coordinates,
+5. In the FEM triangle mesh, we have compute the stiff-matrix by using the barycentric coordinates,
    $$
    \lambda_1, \lambda_2, \lambda_3, ...
    $$
@@ -116,7 +116,11 @@ One can find the details paper in `NutstoreSync/PAPERS/Basics/`, which named as 
     {\rm rot}\, \pmb v = \partial_x v_2 - \partial_y v_1.
     $$
 
-  In 2D, if we introduce the clockwise 
+  In 2D, if we introduce the clockwise $$90^\circ$$ rotation and use $$\perp$$ in the superscript to denote this rotation, then
+  $$
+  {\rm curl}\, f = ({\rm grad}\,f)^{\perp}, \quad {\rm rot}\, \pmb v = {\rm div}(\pmb v^{\perp}).
+  $$
+  
 
 ---
 
