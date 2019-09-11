@@ -64,5 +64,7 @@
 
 ### [15. `Numpy.concatenate()` 函数](subLearningPy/15.md)
 
+---
 
+### [16. Numpy.max() 函数](subLearningPy/16.md)
 
