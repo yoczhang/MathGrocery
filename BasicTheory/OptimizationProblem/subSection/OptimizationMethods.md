@@ -29,7 +29,7 @@ $$
 
 首先我们通过 $$f(\mathbf x_{k+1})$$ 在 $$\mathbf x_k$$ 处 Taylor 展开
 $$
-f(\mathbf x_k + \alpha \mathbf d) = f(\mathbf x_k) + \alpha \mathbf g_k^T \mathbf d + o(\alpha^2), \tag{1.1}
+f(\mathbf x_k + \alpha \mathbf d) = f(\mathbf x_k) + \alpha \mathbf g_k^T \mathbf d + o(\alpha), \tag{1.1}
 $$
 where
 
@@ -53,11 +53,17 @@ We omit the $$o(\alpha^2)$$, and if we want $(1.1)$ to get the minimum value, we
 
 ## 牛顿法
 
+我们这里主要讨论最优化方法, 但是我们也应该知道, 牛顿法至少有两个应用方向, 第一是应用在最优化中, 第二是求方程的根. 
+
+我们首先讨论牛顿法用于最优化.
+
+### 牛顿法用于最优化
+
 [梯度下降法](#梯度下降法)只用到了梯度信息，即目标函数的一阶导数信息，并且在推导[梯度下降法](#梯度下降法)方法时，是通过 $$f(\mathbf x_{k+1})$$ 在 $$\mathbf x_k$$ 处 Taylor 展开得到的。而[牛顿法](#牛顿法)首先会用到目标函数的二阶导数信息，并且在推导的过程中是首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开，然后再对  $$f(\mathbf x)$$ 展开后的两端求极小值问题，我们具体来看
 
 首先通过 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处 Taylor 展开
 $$
-f_k(\mathbf x) = f(\mathbf x_k) + \mathbf g_k^T(\mathbf x-\mathbf x_k) + \frac{1}{2}(\mathbf x-\mathbf x_k)^T\mathbf G_k (\mathbf x-\mathbf x_k) + o(\mathbf x^3), \tag{1.2}
+f_k(\mathbf x) = f(\mathbf x_k) + \mathbf g_k^T(\mathbf x-\mathbf x_k) + \frac{1}{2}(\mathbf x-\mathbf x_k)^T\mathbf G_k (\mathbf x-\mathbf x_k) + o(\mathbf x^2), \tag{1.2}
 $$
 where 
 
@@ -94,6 +100,18 @@ $$
 
 - 牛顿法的收敛性：对一般问题都不是整体收敛的 (只有当初始点充分接近极小点时，才有很好的收敛性);
 - 牛顿法的收敛速度：二阶收敛。因此，它比[梯度下降法](#梯度下降法)要快。
+
+
+
+### 牛顿法用于求方程的根
+
+此时牛顿法一般称作牛顿迭代法或切线法. 目标是要求 $$f(\mathbf x) = 0$$ 的根, 即求 $$\mathbf x^*$$, s.t. $$f(\mathbf x^*) = 0$$.
+
+假设 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处一阶可导, 利用 Taylor 展开
+$$
+f_k(\mathbf x) = f(\mathbf x_k) + (\mathbf x - \mathbf x_k) \mathbf g_k
+$$
+
 
 
 
