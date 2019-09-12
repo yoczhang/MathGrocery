@@ -107,11 +107,16 @@ $$
 
 此时牛顿法一般称作牛顿迭代法或切线法. 目标是要求 $$f(\mathbf x) = 0$$ 的根, 即求 $$\mathbf x^*$$, s.t. $$f(\mathbf x^*) = 0$$.
 
-假设 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处一阶可导, 利用 Taylor 展开
+假设 $$f(\mathbf x)$$ 在 $$\mathbf x_k$$ 处一阶可导, 并在 $$\mathbf x_k$$ 利用 Taylor 展开
 $$
-f_k(\mathbf x) = f(\mathbf x_k) + (\mathbf x - \mathbf x_k) \mathbf g_k
+f_k(\mathbf x) = f(\mathbf x_k) + (\mathbf x - \mathbf x_k) \mathbf g_k + o(\mathbf x),
 $$
+其中 $$\mathbf g_k=\nabla f(\mathbf x_k)$$: the gradient of $$f$$ at $$\mathbf x_k$$.
 
+Let $$f_k(\mathbf x)=0$$, we have $$\mathbf x = \mathbf x_k + \mathbf g_k^{-1}f(\mathbf x_k)$$, so 
+
+- (1). Let $$\mathbf x_{k+1} = \mathbf x_k + \mathbf g_k^{-1}f(\mathbf x_k)$$;
+- (2). Then, if $$f(\mathbf x_{k+1})\not =0$$, go to (1).
 
 
 
