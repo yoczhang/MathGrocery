@@ -115,7 +115,7 @@ $$
 
 Let $$f_k(\mathbf x)=0$$, we have $$\mathbf x = \mathbf x_k - \mathbf g_k^{-1}f(\mathbf x_k)$$, so $$\mathbf x_{k+1} = \mathbf x_{k}+\mathbf d_k$$, where $$\mathbf d_k$$ is the solution of $$\mathbf g_k \mathbf d_k = f(\mathbf x_k)$$. So, the algorithm is 
 
-- (1). Unless a stopping rule is satisfied, solve (for $$\mathbf d_k$$)
+- (1). Unless a stopping rule (such as $$f(\mathbf x_{k}) = 0$$) is satisfied, solve (for $$\mathbf d_k$$)
   $$
   \mathbf g_k \mathbf d_k = -f(\mathbf x_k).
   $$
