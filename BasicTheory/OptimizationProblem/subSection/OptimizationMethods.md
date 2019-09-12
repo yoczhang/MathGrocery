@@ -111,12 +111,17 @@ $$
 $$
 f_k(\mathbf x) = f(\mathbf x_k) + (\mathbf x - \mathbf x_k) \mathbf g_k + o(\mathbf x),
 $$
-其中 $$\mathbf g_k=\nabla f(\mathbf x_k)$$: the gradient of $$f$$ at $$\mathbf x_k$$.
+其中 $$\mathbf g_k=\nabla f(\mathbf x_k)$$: the gradient of $$f$$ at $$\mathbf x_k$$. 
 
-Let $$f_k(\mathbf x)=0$$, we have $$\mathbf x = \mathbf x_k + \mathbf g_k^{-1}f(\mathbf x_k)$$, so 
+Let $$f_k(\mathbf x)=0$$, we have $$\mathbf x = \mathbf x_k - \mathbf g_k^{-1}f(\mathbf x_k)$$, so $$\mathbf x_{k+1} = \mathbf x_{k}+\mathbf d_k$$, where $$\mathbf d_k$$ is the solution of $$\mathbf g_k \mathbf d_k = f(\mathbf x_k)$$. So, the algorithm is 
 
-- (1). Let $$\mathbf x_{k+1} = \mathbf x_k + \mathbf g_k^{-1}f(\mathbf x_k)$$;
-- (2). Then, if $$f(\mathbf x_{k+1})\not =0$$, go to (1).
+- (1). Unless a stopping rule is satisfied, solve (for $$\mathbf d_k$$)
+  $$
+  \mathbf g_k \mathbf d_k = -f(\mathbf x_k).
+  $$
+  
+
+- (2). Set $$\mathbf x_{k+1}:= \mathbf x_k + \mathbf d_k$$, $$k:=k+1$$, and go to (1).
 
 
 
