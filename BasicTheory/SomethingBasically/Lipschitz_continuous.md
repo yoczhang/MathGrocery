@@ -36,3 +36,40 @@ Continuously differentiable $$\subset$$ Lipschitz continuous $$\subset$$ $$\alph
 We also have:
 
 Lipschitz continuous $$\subset$$ absolutely continuous $$\subset$$ bounded variation $$\subset$$ differentiable almost everywhere.
+
+
+
+## Properties
+
+See the wiki for details.
+
+One property is that, for a Lipschitz continuous function, there exists a double cone (white) whose origin can be moved along the graph so that the whole graph always stays outside the double cone:
+
+![Lipschitz_Visualisierung](/Users/yczhang/Documents/MathGrocery/BasicTheory/SomethingBasically/subfiles/Lipschitz_Visualisierung.gif)
+
+
+
+## Understanding Lipschitz Continuity
+
+You can not pick $$K$$ sufficiently enough for a function to be Lipschitz continuous if they are not. That's the main point of that kind of continuity. If $$f$$ is not lipschitz continuous, and you say that $$K=10^6$$, I can find an pair of points $$x_1$$ and $$x_2$$ such that $$|f(x_1)-f(x_2)|\geq 10^6|x_1-x_2|$$. 
+
+Think about the mean value theorem and Lipschitz continuity.
+
+Mean value theorem says if $$f$$ is is continuous at $$[a,b]$$ and differentiable at $$(a,b)$$ then
+$$
+\exist\, c\in(a,b) \text{ such that } \frac{f(b)-f(a)}{b-a} = f'(c).
+$$
+Lipschitz says that 
+$$
+\exist\, K>0,\, \forall a,b\in D_f, \text{ such that } \frac{|f(b)-f(a)|}{|b-a|} \leq K.
+$$
+Then if the derivative of $$f$$ as a function is bounded, then $$f$$ will be Lipschitz.
+
+Consider the case:
+
+$$f(x) = \sqrt{x}$$ for $$x\in[0,1]$$, then $$f$$ is not Lipschitz, since $$\sup_{x\in[0,1]}f'(x) = \lim_{x\rightarrow 0} = +\infin$$.
+
+Also, as an additional note if a function $$f$$ defined on $$S\subset \mathbb R$$ is Lipschitz continuous then $$f$$ is uniformly continuous on $$S$$.
+
+
+
