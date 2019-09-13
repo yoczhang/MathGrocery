@@ -119,9 +119,10 @@ Let $$f_k(\mathbf x)=0$$, we have $$\mathbf x = \mathbf x_k - \mathbf g_k^{-1}f(
   $$
   \mathbf g_k \mathbf d_k = -f(\mathbf x_k).
   $$
-  
 
-- (2). Set $$\mathbf x_{k+1}:= \mathbf x_k + \mathbf d_k$$, $$k:=k+1$$, and go to (1).
+- (2). Set $$\mathbf x_{k+1}:= \mathbf x_k + \alpha_k\mathbf d_k$$, $$\alpha_k \in (0,1]$$, $k:=k+1$$, and go to (1).
+
+About the stopping rule and the explanation of $$\alpha_k$$, see "2010 (lecture) Semismooth NewtonMethods and Applications" (in `/PAPERS/Optimization Problem/Semismooth_Newton_methods/`).
 
 
 
