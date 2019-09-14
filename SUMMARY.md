@@ -5,6 +5,7 @@
 -----
 * [Basic theory](./BasicTheory/BasicTheory.md)
     * [Something basically](./BasicTheory/SomethingBasically/Basically_1.md)
+      * [Lipschitz continuity](./BasicTheory/SomethingBasically/Lipschitz_continuity.md)
     * [Function analysis](./BasicTheory/FunctionAnalysis/FunctionAnalysis.md)
     * [Inequality](./BasicTheory/Inequality/Inequality.md)
     * [Eigenvalue problem](./BasicTheory/EigenvalueProblem/EigenvalueProblem.md)
