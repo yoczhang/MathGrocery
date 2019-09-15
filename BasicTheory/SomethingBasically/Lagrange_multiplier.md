@@ -14,3 +14,5 @@ $$
 $$
 and find the stationary points of $$\mathcal L$$ considered as a function of $$x$$ and the Lagrange multiplier $$\lambda$$. The solution corresponding to the original constrained optimization is always a saddle point of the Lagrangian function.
 
+........ (TODO: see wiki)
+
