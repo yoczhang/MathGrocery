@@ -163,6 +163,7 @@ $$
     $$
     or using $$u^{k+\frac{1}{2}}$$, 
     $$
-    p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}),
+    p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}).
     $$
     
+
