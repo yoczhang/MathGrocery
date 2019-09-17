@@ -56,5 +56,26 @@ p_2:= r_2.
 $$
 In each step, we compute 
 $$
-a_2:=Sp_2=B^*A^{-1}Bp_2 = B^*p_1
+a_2:=Sp_2=B^*A^{-1}Bp_2 =: B^*p_1
 $$
+and keep the intermediate result 
+$$
+p_1: A^{-1}B p_2
+$$
+for later. The scaling factor is given by 
+$$
+\alpha:=p_2^*a_2/p_2^*r_2 \quad (\text{but, what's the } p_2^* \text{ mean?})
+$$
+and leads to the updates
+$$
+x_2:= x_2+ \alpha p_2, \quad r_2:= r_2-\alpha a_2.
+$$
+Using the intermediate result $$p_1$$ saved earlier, we can also update the upper part of the solution vector 
+$$
+x_1: = x_1-\alpha p_1.
+$$
+Now we only have to construct the new search direction by the [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram–Schmidt_process), i.e.,
+$$
+\beta:= r_2^*a_2/p_2^*a_2, \quad p_2:=r_2-\beta p_2.
+$$
+The iteration terminates if the residual $$r_2$$ significantly small or if the norm of $$p_2$$ is significantly smaller than indicating that the [Krylov subspace](https://en.wikipedia.org/wiki/Krylov_subspace) has been almost exhausted.
