@@ -68,3 +68,7 @@
 
 ### [16. Numpy.max() 函数](subLearningPy/16.md)
 
+---
+
+### [17. What is the difference between ndarray and array in numpy?](subLearningPy/17.md)
+
