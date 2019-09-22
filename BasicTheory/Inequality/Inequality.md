@@ -10,7 +10,7 @@ The following inequlities mostly from HHO papers.
 
 ## Presetting
 
-let 
+et 
 
 - $$\Omega$$ be the domain;
 
