@@ -23,3 +23,4 @@ and, if $$A$$ is invertible, the Schur complement of the block $$A$$ of the matr
 $$
 M/A:= D-CA^{-1}B. \quad \text{Quick rember: D, C order.}
 $$
+

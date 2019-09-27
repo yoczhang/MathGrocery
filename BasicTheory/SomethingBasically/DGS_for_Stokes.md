@@ -34,11 +34,11 @@ I \quad \nabla \\
 0 \quad \mu\Delta_p
 \end{pmatrix}.
 $$
-Since $$-\mu \Delta \nabla + \nabla \mu\Delta = (-\mu \Delta + \nabla \mu\nabla\cdot)\nabla = (\mu\nabla\times\nabla\times)\nabla = 0$$, therefore $$\mathcal L\mathcal M = \begin{pmatrix} -\mu\Delta \quad 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}$$ is lower triangluar matrix. Thus 
+Since $$-\mu \Delta \nabla + \nabla \mu\Delta = (-\mu \Delta + \nabla \mu\nabla\cdot)\nabla = (\mu\nabla\times\nabla\times)\nabla = 0$$, therefore $$\mathcal L\mathcal M = \begin{pmatrix} -\mu\Delta \quad\ 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}$$ is lower triangluar matrix. Thus 
 $$
 \begin{align}
 \mathcal L^{-1} &= \mathcal M(\mathcal L\mathcal M)^{-1} \tag{3} \\
-&= M \begin{pmatrix} -\mu\Delta \quad 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}^{-1} \tag{4}
+&= \mathcal M \begin{pmatrix} -\mu\Delta \quad 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}^{-1} \tag{4}
 \end{align}
 $$
 will be a good candidate for $$\mathcal B$$.
@@ -114,23 +114,23 @@ We now give detail calculation of equation $$(5)$$.
   where, we define the intermedia velocity $$\pmb u^{k+\frac{1}{2}}:=\pmb u^k + \delta w_{\pmb u}^k$$.
 
   So for equation $$(6)$$, we have 
-$$
+  $$
   \pmb u^{k+1} = \pmb u^{k+\frac{1}{2}} + \nabla \delta w_p^k,
   $$
   where we can get $$\pmb u^{k+\frac{1}{2}}$$ by solving $$(8.3)$$ with one Gauss-Seidel relaxation. 
-  
+
   The next thing is to solve $$\delta w_p^k$$, this involves the second equation of $$(5)$$.
 
 - The second equation of $$(5)$$ is 
-$$
+  $$
   \begin{align}
-  -\Delta \delta w_p^k &= r_p + \nabla\cdot\delta w_{\pmb u}^k \\
-  &= g + \nabla\cdot \pmb u^k + \nabla\cdot\delta w_{\pmb u}^k \\
-  &= g + \nabla\cdot(u^k+\delta w_{\pmb u}^k)\\
-  &= g + \nabla\cdot \pmb u^{k+\frac{1}{2}}.
+    -\Delta \delta w_p^k &= r_p + \nabla\cdot\delta w_{\pmb u}^k \\
+    &= g + \nabla\cdot \pmb u^k + \nabla\cdot\delta w_{\pmb u}^k \\
+    &= g + \nabla\cdot(u^k+\delta w_{\pmb u}^k)\\
+    &= g + \nabla\cdot \pmb u^{k+\frac{1}{2}}.
   \end{align}
-$$
-  So for equation $$(7)$$, we have $$p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}})$$.
+  $$
+   So for equation $$(7)$$, we have $$p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}})$$.
 
 Finally, we can see that even though we introduce operators such as $$\mathcal L$$ and $$\mathcal M$$, we don't use it in the implementation. The algorithm can be summarized as the following:
 
@@ -138,12 +138,11 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
 
 - **Step 1**: Relax momentum equation to get intermedia velocity $$\pmb u^{k+\frac{1}{2}}$$. 
 
-  Solve momentum equation
-$$
--\mu \Delta \pmb u^{k+\frac{1}{2}} =\pmb f - \nabla p^k,
-$$
+  Solve momentum equation 
+  $$
+  -\mu \Delta \pmb u^{k+\frac{1}{2}} =\pmb f - \nabla p^k,
+  $$
   approximately by one Gauss-Seidel relaxation.
-
 - **Step 2**: Update velocity cellwisely and pressure patchwisely.
 
   - **Step 2.1**: For each cell $$T$$, solve the following equation to get $$\delta w_p^k$$
@@ -161,7 +160,7 @@ $$
     $$
     p^{k+1} = p^{k} + \Delta \delta w_p^k,
     $$
-    or using $$u^{k+\frac{1}{2}}$$, 
+    or using $$\pmb{u}^{k+\frac{1}{2}}$$, 
     $$
     p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}).
     $$
