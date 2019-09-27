@@ -133,11 +133,11 @@ We now give detail calculation of equation $$(5)$$.
   \begin{align}
     -\Delta \delta w_p^k &= r_p + \nabla\cdot\delta w_{\pmb u}^k \\
     &= g + \nabla\cdot \pmb u^k + \nabla\cdot\delta w_{\pmb u}^k \\
-    &= g + \nabla\cdot(u^k+\delta w_{\pmb u}^k)\\
+    &= g + \nabla\cdot(\pmb u^k+\delta w_{\pmb u}^k)\\
     &= g + \nabla\cdot \pmb u^{k+\frac{1}{2}}.
   \end{align}
   $$
-   So for equation $$(7)$$, we have $$p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}})$$.
+   So for equation $$(7)$$, we have $$p^{k+1} = p^{k} + \mu\Delta \delta w_p^k = p^{k} + \mu(-g - \nabla\cdot \pmb u^{k+\frac{1}{2}})$$.
 
 Finally, we can see that even though we introduce operators such as $$\mathcal L$$ and $$\mathcal M$$, we don't use it in the implementation. The algorithm can be summarized as the following:
 
@@ -165,11 +165,10 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
   
   - **Step 2.2**: Correct pressure for the current cell $$T$$ and its neighboring cells.
     $$
-    p^{k+1} = p^{k} + \Delta \delta w_p^k,
+    p^{k+1} = p^{k} + \mu\Delta \delta w_p^k,
     $$
-    or using $$\pmb{u}^{k+\frac{1}{2}}$$, 
+    or using $$\pmb{u}^{k+\frac{1}{2}}$$ and equation $$(7)$$ 
     $$
-    p^{k+1} = p^{k} + \Delta \delta w_p^k = p^{k} + (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}).
+    p^{k+1} = p^{k} + \mu\Delta \delta w_p^k = p^{k} + \mu (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}).
     $$
     
-
