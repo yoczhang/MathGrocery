@@ -34,16 +34,23 @@ I \quad \nabla \\
 0 \quad \mu\Delta_p
 \end{pmatrix}.
 $$
-Since $$-\mu \Delta \nabla + \nabla \mu\Delta = (-\mu \Delta + \nabla \mu\nabla\cdot)\nabla = (\mu\nabla\times\nabla\times)\nabla = 0$$, therefore $$\mathcal L\mathcal M = \begin{pmatrix} -\mu\Delta \quad\ 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}$$ is lower triangluar matrix. Thus 
+Since $$-\mu \Delta \nabla + \nabla \mu\Delta = (-\mu \Delta + \nabla \mu\nabla\cdot)\nabla = (\mu\nabla\times\nabla\times)\nabla = 0$$, therefore $$\mathcal L\mathcal M = \begin{pmatrix} -\mu\Delta \quad\ 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}$$ is lower triangluar matrix. Here we have used the identity
+$$
+-\Delta = -\rm{grad\,div + curl\,curl \quad(in\ 3D)},\\
+-\Delta = -\rm{grad\,div + curl\,rot \quad(in\ 2D)},
+$$
+which holds in $$H^{-1}$$ topology, and the fact $$\rm{curl\,grad = 0}$$.
+
+Thus 
 $$
 \begin{align}
 \mathcal L^{-1} &= \mathcal M(\mathcal L\mathcal M)^{-1} \tag{3} \\
-&= \mathcal M \begin{pmatrix} -\mu\Delta \quad 0 \\ -\nabla\cdot \quad - \Delta_p \end{pmatrix}^{-1} \tag{4}
+&= \mathcal M \begin{pmatrix} -\mu\Delta&  &0 \\ -(\nabla\cdot)&  &- \Delta_p \end{pmatrix}^{-1} \tag{4}
 \end{align}
 $$
 will be a good candidate for $$\mathcal B$$.
 
-**Update procedure**: Given $$\pmb u^k$$ and $$p^k$$, how to update it by computing the errors $$\delta\pmb u^k$$ and $$\delta p^k$$? 
+**Update procedure**: Given $$\pmb u^k$$ and $$p^k$$, how to update it by computing the errors $$\delta\pmb u^k$$ and $$\delta p^k$$ ? 
 
 We first form the residual $$r_{\pmb u}$$ and $$r_p$$ as 
 $$
