@@ -74,6 +74,15 @@ $$
 $$
 and here $$\mu>0$$.
 
+Thus 
+$$
+\begin{align}
+\mathcal L^{-1} &= \mathcal M(\mathcal L\mathcal M)^{-1} \tag{3} \\
+&= \mathcal M \begin{pmatrix} -\mu\Delta&  &0 \\ -(\nabla\cdot)&  &- \Delta_p \end{pmatrix}^{-1} \tag{4}
+\end{align}
+$$
+will be a good candidate for $$\mathcal B$$, where $$\mathcal B$$ is an approximation of $$\mathcal L^{-1}$$.
+
 Next we give the residual ($$r = F - \mathcal L U$$), $$r_{\pmb u}$$ and $$r_p$$ as 
 $$
 r_{\pmb u} = \pmb f + \mu\Delta \pmb u^k - \nabla p^k, \quad r_p = g+ \nabla\cdot \pmb u^k + p^k.
@@ -197,6 +206,146 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
     $$
     p^{k+1} = p^{k} + \mu\Delta \delta w_p^k = p^{k} + \frac{\mu}{-1-\mu}(g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}}).
     $$
+
+
+
+---
+
+## Step 3
+
+Suppose we solve equations 
+$$
+\mathcal L U = F \tag{10}
+$$
+where 
+$$
+\begin{equation}\mathcal L = \begin{pmatrix}-\mu \Delta + \gamma I \quad \nabla \\-\nabla\cdot \quad -I\end{pmatrix}, \quad U = \begin{pmatrix}\pmb u \\p\end{pmatrix}, \quad F = \begin{pmatrix}\pmb f \\g\end{pmatrix},\end{equation}
+$$
+with $$I$$ is the identity operator.
+
+We need to find the distributive matrix $$\mathcal M$$ such that $$\mathcal L \mathcal M$$ is the lower triangluar matrix. We choose the same $$\mathcal M$$ as in the DGS for Stokes problem:
+$$
+\mathcal M = \begin{pmatrix} &I &\nabla \\ &0 &\mu(\nabla\cdot)\nabla - \gamma I\end{pmatrix} = \begin{pmatrix} &I &\nabla \\ &0 &\mu\Delta - \gamma I \end{pmatrix},
+$$
+we check that
+$$
+\begin{align}
+\mathcal L \mathcal M =&\begin{pmatrix}-\mu \Delta + \gamma I \quad \nabla \\-\nabla\cdot \quad -I\end{pmatrix}\begin{pmatrix} &I &\nabla \\ &0 &\mu(\nabla\cdot) \nabla - \gamma I\end{pmatrix} \\
+=&\begin{pmatrix}
+&-\mu\Delta + \gamma I   &(-\mu\Delta+\gamma I) \nabla + \nabla (\mu \Delta-\gamma I) \\
+& -(\nabla\cdot)   &-(\nabla\cdot)\nabla-(\mu\Delta-\gamma I)
+\end{pmatrix} \\
+=&\begin{pmatrix}
+&-\mu\Delta   &0 \\
+& -(\nabla\cdot)   &(-1-\mu)\Delta + \gamma I
+\end{pmatrix},
+\end{align}
+$$
+where $$\mu>0$$ and we have used $$-\mu \Delta \nabla + \nabla \mu\Delta =0$$.
+
+Thus 
+$$
+\begin{align}
+\mathcal L^{-1} &= \mathcal M(\mathcal L\mathcal M)^{-1} \tag{11.1} \\
+&= \mathcal M \begin{pmatrix}
+&-\mu\Delta   &0 \\
+& -(\nabla\cdot)   &(-1-\mu)\Delta + \gamma I
+\end{pmatrix}^{-1} \tag{11.2}
+\end{align}
+$$
+will be a good candidate for $$\mathcal B$$, where $$\mathcal B$$ is an approximation of $$\mathcal L^{-1}$$.
+
+Next we give the residual ($$r = F - \mathcal L U$$), $$r_{\pmb u}$$ and $$r_p$$ as 
+$$
+r_{\pmb u} = \pmb f + \mu\Delta \pmb u^k - \gamma \pmb u^k  - \nabla p^k, \quad r_p = g+ \nabla\cdot \pmb u^k + p^k.
+$$
+Then we have 
+$$
+\mathcal L \begin{pmatrix}
+\delta\pmb u^k \\ \delta p^k
+\end{pmatrix} = \begin{pmatrix}
+r_{\pmb u} \\ r_p
+\end{pmatrix} \quad \Longrightarrow \quad
+\begin{pmatrix}
+\delta\pmb u^k \\ \delta p^k
+\end{pmatrix} = \mathcal L^{-1} \begin{pmatrix}
+r_{\pmb u} \\ r_p
+\end{pmatrix},
+$$
+by using $$(4)$$,
+$$
+\begin{pmatrix}
+\delta\pmb u^k \\ \delta p^k
+\end{pmatrix} = \mathcal M(\mathcal L \mathcal M)^{-1} \begin{pmatrix}
+r_{\pmb u} \\ r_p
+\end{pmatrix}.
+$$
+If we set 
+$$
+\mathcal L \mathcal M \begin{pmatrix}\delta w_{\pmb u}^k \\ \delta w_p^k\end{pmatrix} =  \begin{pmatrix}r_{\pmb u} \\ r_p\end{pmatrix}, \quad \text{i.e.,} \quad \begin{pmatrix}\delta w_{\pmb u}^k \\ \delta w_p^k\end{pmatrix} = (\mathcal L \mathcal M )^{-1} \begin{pmatrix}r_{\pmb u} \\ r_p\end{pmatrix}, \tag{12}
+$$
+then
+$$
+\begin{pmatrix}
+\delta\pmb u^k \\ \delta p^k
+\end{pmatrix} = \mathcal M \begin{pmatrix}
+\delta w_{\pmb u}^k \\ \delta w_p^k
+\end{pmatrix} = \begin{pmatrix}
+\delta w_{\pmb u}^k + \nabla \delta w_p^k \\ \mu\Delta \delta w_p^k - \gamma \delta w_p^k
+\end{pmatrix}.
+$$
+Hence $$\pmb u^{k+1}$$ and $$p^{k+1}$$ can be updated as 
+$$
+\begin{align}
+&\pmb u^{k+1} = \pmb u^{k} + \delta\pmb u^{k} = \underline{\pmb u^{k} + \delta w_{\pmb u}^k} + \nabla \delta w_p^k, \tag{13}\\
+&p^{k+1} = p^k + \delta p^{k} = p^k + \mu\Delta \delta w_p^k - \gamma \delta w_p^k, \tag{14}
+\end{align}
+$$
+here, we need note the underline term $$\pmb u^{k} + \delta w_{\pmb u}^k$$, which will be reformed in the following.
+
+We now give detail calculation of equation $$(12)$$.
+
+- The first equation of $$(12)$$ is $$-\mu \Delta \delta w_{\pmb u}^k = r_{\pmb u}$$, combined with the definition of $$r_{\pmb u}$$
+  $$
+  \begin{align}
+  &\ -\mu \Delta \delta w_{\pmb u}^k = \pmb f \mu\Delta \pmb u^k - \gamma\pmb u^k - \nabla p^k, \tag{15.1} \\
+  \Longrightarrow &\ -\mu \Delta (\pmb u^k + \delta w_{\pmb u}^k ) =\pmb f - \gamma\pmb u^k - \nabla p^k,\tag{15.2}  \\
+  :\Longrightarrow &\ -\mu \Delta \pmb u^{k+\frac{1}{2}} =\pmb f - \gamma\pmb u^k - \nabla p^k, \tag{15.3}
+  \end{align}
+  $$
+  where, we define the intermedia velocity $$\pmb u^{k+\frac{1}{2}}:=\pmb u^k + \delta w_{\pmb u}^k$$.
+
+  So for equation $$(13)$$, we have 
+  $$
+  \pmb u^{k+1} = \pmb u^{k+\frac{1}{2}} + \nabla \delta w_p^k,
+  $$
+  where we can get $$\pmb u^{k+\frac{1}{2}}$$ by solving $$(15.3)$$ with one Gauss-Seidel relaxation. 
+
+  The next thing is to solve $$\delta w_p^k$$, this involves the second equation of $$(12)$$.
+
+- The second equation of $$(12)$$ is 
+  $$
+  \begin{align}
+    (-1-\mu)\Delta \delta w_p^k + \gamma\delta w_p^k &= r_p + \nabla\cdot\delta w_{\pmb u}^k \\
+    &= g + p^k + \nabla\cdot \pmb u^k + \nabla\cdot\delta w_{\pmb u}^k \\
+    &= g + p^k + \nabla\cdot(\pmb u^k+\delta w_{\pmb u}^k)\\
+    &= g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}}.
+  \end{align}
+  $$
+   So for equation $$(14)$$, we have 
+  $$
+  p^{k+1} = p^{k} + \mu\Delta \delta w_p^k - \gamma\delta w_p^k = p^{k} -(g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}} + \Delta\delta w_p^k) \tag{16}.
+  $$
+
+Finally, we can see that even though we introduce operators such as $$\mathcal L$$ and $$\mathcal M$$, we don't use it in the implementation. The algorithm can be summarized as the following:
+
+
+
+
+
+
+
+
 
 
 
