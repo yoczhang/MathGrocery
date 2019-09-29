@@ -236,7 +236,7 @@ $$
 & -(\nabla\cdot)   &-(\nabla\cdot)\nabla-(\mu\Delta-\gamma I)
 \end{pmatrix} \\
 =&\begin{pmatrix}
-&-\mu\Delta   &0 \\
+&-\mu\Delta + \gamma I   &0 \\
 & -(\nabla\cdot)   &(-1-\mu)\Delta + \gamma I
 \end{pmatrix},
 \end{align}
@@ -305,12 +305,10 @@ here, we need note the underline term $$\pmb u^{k} + \delta w_{\pmb u}^k$$, whic
 
 We now give detail calculation of equation $$(12)$$.
 
-- The first equation of $$(12)$$ is $$-\mu \Delta \delta w_{\pmb u}^k = r_{\pmb u}$$, combined with the definition of $$r_{\pmb u}$$
+- The first equation of $$(12)$$ is $$-\mu \Delta \delta w_{\pmb u}^k + \gamma \delta w_{\pmb u}^k = r_{\pmb u}$$, combined with the definition of $$r_{\pmb u}$$
   $$
   \begin{align}
-  &\ -\mu \Delta \delta w_{\pmb u}^k = \pmb f \mu\Delta \pmb u^k - \gamma\pmb u^k - \nabla p^k, \tag{15.1} \\
-  \Longrightarrow &\ -\mu \Delta (\pmb u^k + \delta w_{\pmb u}^k ) =\pmb f - \gamma\pmb u^k - \nabla p^k,\tag{15.2}  \\
-  :\Longrightarrow &\ -\mu \Delta \pmb u^{k+\frac{1}{2}} =\pmb f - \gamma\pmb u^k - \nabla p^k, \tag{15.3}
+  &\ -\mu \Delta \delta w_{\pmb u}^k +\gamma\delta w_{\pmb u}^k = \pmb f+ \mu\Delta \pmb u^k - \gamma\pmb u^k - \nabla p^k, \tag{15.1}
   \end{align}
   $$
   where, we define the intermedia velocity $$\pmb u^{k+\frac{1}{2}}:=\pmb u^k + \delta w_{\pmb u}^k$$.
