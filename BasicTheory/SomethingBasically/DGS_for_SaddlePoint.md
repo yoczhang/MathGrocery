@@ -223,7 +223,7 @@ $$
 $$
 with $$I$$ is the identity operator.
 
-We need to find the distributive matrix $$\mathcal M$$ such that $$\mathcal L \mathcal M$$ is the lower triangluar matrix. We choose the same $$\mathcal M$$ as in the DGS for Stokes problem:
+We need to find the distributive matrix $$\mathcal M$$ such that $$\mathcal L \mathcal M$$ is the lower triangluar matrix. We choose the $$\mathcal M$$ as:
 $$
 \mathcal M = \begin{pmatrix} &I &\nabla \\ &0 &\mu(\nabla\cdot)\nabla - \gamma I\end{pmatrix} = \begin{pmatrix} &I &\nabla \\ &0 &\mu\Delta - \gamma I \end{pmatrix},
 $$
@@ -330,9 +330,9 @@ We now give detail calculation of equation $$(12)$$.
     &= g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}}.
   \end{align}
   $$
-   So for equation $$(14)$$, we have 
+   So for equation $$(14)$$, we have (the red formulation is not needed)
   $$
-  p^{k+1} = p^{k} + \mu\Delta \delta w_p^k - \gamma\delta w_p^k = p^{k} -(g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}} + \Delta\delta w_p^k) \tag{16}.
+  p^{k+1} = p^{k} + \mu\Delta \delta w_p^k - \gamma\delta w_p^k \color{red}{= p^{k} -(g + p^k + \nabla\cdot \pmb u^{k+\frac{1}{2}} + \Delta\delta w_p^k) } \tag{16}.
   $$
 
 Finally, we can see that even though we introduce operators such as $$\mathcal L$$ and $$\mathcal M$$, we don't use it in the implementation. The algorithm can be summarized as the following:
