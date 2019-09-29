@@ -6,7 +6,7 @@ The DGS for Stokes problem has been introduced in [DGS_for_Stokes](./DGS_for_Sto
 
 ---
 
-## Step 1 (Done)
+## Step 1
 
 Suppose we solve Stokes equations 
 $$
@@ -38,7 +38,7 @@ Since $$-\mu \Delta \nabla + \nabla \mu\Delta = (-\mu \Delta + \nabla \mu\nabla\
 $$
 -\Delta = -\rm{grad\,div + curl\,curl \quad(in\ 3D)},\\-\Delta = -\rm{grad\,div + curl\,rot \quad(in\ 2D)},
 $$
-which holds in $$H^{-1}$$ topology, and the fact $$\rm{curl\,grad = 0}$$.
+which holds in $$H^{-1}$$ topology, and the fact: $$\rm{curl\,grad = 0}$$.
 
 ---
 
