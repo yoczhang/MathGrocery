@@ -248,7 +248,7 @@ $$
 \begin{align}
 \mathcal L^{-1} &= \mathcal M(\mathcal L\mathcal M)^{-1} \tag{11.1} \\
 &= \mathcal M \begin{pmatrix}
-&-\mu\Delta   &0 \\
+&-\mu\Delta + \gamma I &0 \\
 & -(\nabla\cdot)   &(-1-\mu)\Delta + \gamma I
 \end{pmatrix}^{-1} \tag{11.2}
 \end{align}
