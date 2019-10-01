@@ -172,3 +172,4 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
     p^{k+1} = p^{k} + \mu\Delta \delta w_p^k = p^{k} + \mu (-g - \nabla\cdot \pmb u^{k+\frac{1}{2}}).
     $$
     
+

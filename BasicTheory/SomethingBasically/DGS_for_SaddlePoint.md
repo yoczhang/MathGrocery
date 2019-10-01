@@ -311,7 +311,7 @@ We now give detail calculation of equation $$(12)$$.
   &\ -\mu \Delta \delta w_{\pmb u}^k +\gamma\delta w_{\pmb u}^k = \pmb f+ \mu\Delta \pmb u^k - \gamma\pmb u^k - \nabla p^k, \tag{15.1}
   \end{align}
   $$
-  where, we define the intermedia velocity $$\pmb u^{k+\frac{1}{2}}:=\pmb u^k + \delta w_{\pmb u}^k$$.
+  where, we define the intermedia velocity $$\pmb u^{k+\frac{1}{2}}:=\pmb u^k + \delta w_{\pmb u}^k$$ (actually, there is no need to define the intermedia $$\pmb u^{k+\frac{1}{2}}$$). 
 
   So for equation $$(13)$$, we have 
   $$
