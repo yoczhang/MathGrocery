@@ -409,18 +409,25 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
     \end{align}
     $$
     
-
-  - Boundary nodes, we have seen in the $$ u, v, p$$ figure, and we refer LongChen's note "MACStokes.pdf".
-
-    > We then discuss discretization of boundary conditions. For Dirichlet boundary condition, one can impose it in one direction by fixing the value laying on the boundary and by extrapolation on the other direction. Let us take $$x$$-coordinate component velocity $$u$$ as an example. On edges $$x=0$$ and $$x=1$$, the value is given by the boundary condition and no equation is discretized on these points. On edges $$y=0$$ and $$y=1$$, however, there is no unknowns of $$u$$ on that edge and we need to modify the stencil at $$y=h/2, 1-h/2$$. As an example, consider the discretization at the index $$(1,j)$$. We introduce the gost value at $$y = 1+h/2$$, i.e., $$u(0,j)$$. Then we can discretize $$-\Delta u$$. The ghost value can be eliminated by the linear extrapolation, i.e., requiring $$(u^{0,j}+u^{1,j})/2 = u_D(x_j,1)$$. Therefore the modified discretization of $$-\Delta u$$ is 
+- Boundary nodes, we have seen in the $$ u, v, p$$ figure, and we refer LongChen's note "MACStokes.pdf".
+  
+  > We then discuss discretization of boundary conditions. For Dirichlet boundary condition, one can impose it in one direction by fixing the value laying on the boundary and by extrapolation on the other direction. Let us take $$x$$-coordinate component velocity $$u$$ as an example. On edges $$x=0$$ and $$x=1$$, the value is given by the boundary condition and no equation is discretized on these points. On edges $$y=0$$ and $$y=1$$, however, there is no unknowns of $$u$$ on that edge and we need to modify the stencil at $$y=h/2, 1-h/2$$. As an example, consider the discretization at the index $$(1,j)$$. We introduce the gost value at $$y = 1+h/2$$, i.e., $$u(0,j)$$. Then we can discretize $$-\Delta u$$. The ghost value can be eliminated by the linear extrapolation, i.e., requiring $$(u^{0,j}+u^{1,j})/2 = u_D(x_j,1)$$. Therefore the modified discretization of $$-\Delta u$$ is 
     > $$
     > \begin{align}
     > -\Delta u =& \frac{4u^{1,j} - u^{0,j}-u^{2,j}-u^{1,j-1}-u^{2,j+1}}{h^2} \\
     > =& \frac{5u^{1,j} - 2u_D(x_j,1)-u^{2,j}-u^{1,j-1}-u^{2,j+1}}{h^2}.
     > \end{align}
     > $$
-
-  - But we need to find the 
+  
+- But we need to find the $$-\Delta$$ opertor on the boundary, we take $$-\Delta U_{1,j}$$ as an example, but we should also note that here $$2\leq j \leq N-1$$, which meas that $$j$$ is the interior nodes,
+    $$
+    -\Delta U_{1,j} = \frac{3 U_{1,j}- U_{1,j-1} - U_{1,j+1} - U_{2,j}}{h^2}.
+    $$
+    For the corner point such as $$(1,N)$$,
+    $$
+    -\Delta U_{1,N} = \frac{2U_{1,N}-U_{1,N-1} - U_{2,N}}{h^2}.
+    $$
+    
 
 
 
