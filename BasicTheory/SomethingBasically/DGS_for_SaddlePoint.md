@@ -421,11 +421,7 @@ Finally, we can see that even though we introduce operators such as $$\mathcal L
   
 - But we need to find the $$-\Delta$$ opertor on the boundary, we take $$-\Delta U_{1,j}$$ as an example, but we should also note that here $$2\leq j \leq N-1$$, which meas that $$j$$ is the interior nodes,
     $$
-    -\Delta U_{1,j} = \frac{3 U_{1,j}- U_{1,j-1} - U_{1,j+1} - U_{2,j}}{h^2}.
-    $$
-    For the corner point such as $$(1,N)$$,
-    $$
-    -\Delta U_{1,N} = \frac{2U_{1,N}-U_{1,N-1} - U_{2,N}}{h^2}.
+    -\Delta U_{1,j} = \frac{5 U_{1,j} - 2U_{1,j}^D - U_{1,j-1} - U_{1,j+1} - U_{2,j}}{h^2}.
     $$
     
 
