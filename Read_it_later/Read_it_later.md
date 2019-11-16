@@ -116,6 +116,11 @@ Read it! Read it! Read it!
 
 ---
 
+### 2017 (SIAM Review) On the Divergence Constraint in Mixed Finite Element Methods for Incompressible Flows
 
+Located in `/PAPERS/0_Read_it_later`.
 
+This author is also the author of book: 2016 Finite element methods for incompressible flow problems
+
+---
 
