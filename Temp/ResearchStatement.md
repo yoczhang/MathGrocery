@@ -2,6 +2,8 @@
 
 本文研究的主要方向是自由流, 多孔介质流及其耦合问题的高阶间断有限元方法的数值模拟和理论分析. 其中自由流区域考虑三种流体方程:  Stokes方程, 带阻尼项的 Stokes 方程, 以及拟牛顿 Stokes 方程. 多孔介质流由 Darcy 方程给出.
 
+The main research of this thesis is the numerical simulation and theoretical analysis of free flow, porous media flow and their coupling problems by high order discontinuous finite element method. Three kinds of fluid equations are considered in the free flow region: Stokes equation, Stokes equation with damping term and quasi-Newton Stokes equation. The porous media flow is given by Darcy equation.
+
 
 
 由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状; 实践中得到在界面处匹配的的网格剖分是很困难的, 所以本文采用了支持任意多边形网格的数值算法. 另外, 在同样网格尺寸的情况下, 高阶元可以达到更高的精度. 所以支持多面体网格和可能的任意阶的离散化方法在过去的十年中经历了蓬勃发展. 新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
