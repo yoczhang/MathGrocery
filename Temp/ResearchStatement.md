@@ -8,9 +8,11 @@ The main research of this thesis is the numerical simulation and theoretical ana
 
 由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状; 实践中得到在界面处匹配的的网格剖分是很困难的, 所以本文采用了支持任意多边形网格的数值算法. 另外, 在同样网格尺寸的情况下, 高阶元可以达到更高的精度. 所以支持多面体网格和可能的任意阶的离散化方法在过去的十年中经历了蓬勃发展. 新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
 
+Due to the complex geometry of free flow and porous media, the interface of the coupled problem also has irregular shape. In practice, it is very difficult to get the mesh matching at the interface, so this paper adopts a numerical method to support arbitrary polygon mesh. In addition, under the same mesh size, the higher-order element can achieve higher accuracy. Therefore, it is necessary to support The discretization method with polyhedral mesh and possible arbitrary order has experienced vigorous development in the past ten years. New design and analysis methods have been developed or rediscovered. They draw on the ideas of other mathematical branches (such as topology and geometry), or expand the original ideas of finite element or finite volume method.
 
 
-本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来研究上述流体方程. 因为所研究的数值逼近基于分片多项式, 所以我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 因为 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯性网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我么统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力和速度的最优 $ L^2 $ 误差估计.
+
+本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来研究上述流体方程. 因为所研究的数值逼近基于分片多项式, 所以我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 由于 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯性网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我么统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力和速度的最优 $ L^2 $ 误差估计.
 
 
 
