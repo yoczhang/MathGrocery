@@ -12,9 +12,9 @@ Due to the complex geometry of free flow and porous media, the interface of the 
 
 
 
-本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来研究上述流体方程. 因为所研究的数值逼近基于分片多项式, 所以我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 由于 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯性网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我么统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力和速度的最优 $ L^2 $ 误差估计.
+本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来研究上述流体方程. 因为所研究的数值逼近基于分片多项式, 所以我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 由于 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯形网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我们统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力的最优 $ L^2 $ 误差估计.
 
-In this paper, discontinuous Galerkin (DG) and hybrid high-order method (HHO) are used to study the above-mentioned fluid equations. Because the numerical approximation studied is based on piecewise polynomials, we start from the classical interior penalty (IP) DG method. Because the basis function of DG method is piecewise polynomials, the In this paper, we apply the DG scheme to Stokes problem with damping term. In this scheme, we use the equal order element to discrete the velocity and pressure (d = 2 in this paper). We analyze the symmetry of the discrete problem The well posedness of the three schemes of asymmetric and incomplete symmetry is given. The optimal H ^ 1 error estimates for velocity and the optimal L ^ 2 error estimates for pressure and velocity are given.
+In this thesis, the discontinuous Galerkin (DG) method and hybrid high-order (HHO) method are used to study the above-mentioned fluid equations. Because the numerical approximations are based on piecewise polynomials, we start from the classical interior penalty (IP) DG method. Since the basis functions of DG method are piecewise polynomials, its scheme cannot be restricted by the simplex meshes. After the development in recent years, the DG method supporting polygon meshes is gradually improved in theories. Based on these theories, the DG method is applied to Stokes problem with damping term. In this scheme, we use the equal order element $ \mathbb P_k^d-\mathbb P_k $ to discrete the velocity and pressure ($ d = 2 $ in this thesis). We analyze the well posedness of symmetric, asymmetric and incompletely symmetric schemes for the discrete problem, and give the optimal $ H^1 $ error estimates for velocity and the optimal $ L^2 $ error estimates for pressure.
 
 
 
@@ -31,14 +31,6 @@ DG 的优点很明显, 但其仍有不少难以避免的缺点, 其中最主要�
 
 
 以上模型的自由流区域考虑的都是牛顿流体 (即粘度是恒定的常数), 接下来我们尝试用 HHO 方法求解一类拟牛顿流体问题. 拟牛顿流体是对复杂流体 (非牛顿流体) 的一种简单近似. 复杂流体是指粘度是非恒定的一类流体 (实验测量表明, 粘度随形变速率的变化而变化), 这类流体在现实生活中广泛存在, 例如水泥, 牙膏, 血液等糊状物或聚合物溶液都是复杂流体. 描述复杂流体最简单的方法是绘制粘度测量值与外加剪切速率的关系图, 然后通过调整一些参数, 再用简单的函数拟合得到粘度与剪切速率的曲线图. 这也是拟牛顿流体模型的主要思想. 令 $ |\nabla_s\pmb u| $ 表示剪切速率, 粘度函数由非线性函数 $\mu(|\nabla_s \pmb u |)$ 给出, 并且满足一定的正则性条件. 此处考虑两种经典的粘度函数: power law 粘度函数和 Carreau’s law 粘度函数. 数值离散时利用 HHO 方法重构了梯度和散度算子, 给出了速度和压力的最优误差估计. 
-
-
-
-
-
-分别利用 HHO 方法求解了自由流体区域中的一类拟牛顿 Stokes 问题和耦合的 Stokes-Darcy 问题.  我们给出了关于速度最优 $ H^1 $ 和压力最优 $ L^2 $ 误差估计. 
-
-以及拟牛顿 Stokes 方程和带有阻尼项的 Stokes 方程. 
 
 
 
