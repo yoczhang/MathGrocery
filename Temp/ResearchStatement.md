@@ -6,7 +6,7 @@ The main research of this thesis is the numerical simulation and theoretical ana
 
 
 
-由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状; 实践中得到在界面处匹配的的网格剖分是很困难的, 所以本文采用了支持任意多边形网格的数值算法. 另外, 在同样网格尺寸的情况下, 高阶元可以达到更高的精度. 所以支持多面体网格和可能的任意阶的离散化方法在过去的十年中经历了蓬勃发展. 新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
+由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状. 实践中得到在界面处匹配的的网格剖分是很困难的, 而多边形网格可以很好的解决这一问题, 所以本文采用了支持多边形网格的数值算法. 另外, 在保持数值格式和网格尺寸不变的情况下, 高阶元可以达到更高的精度, 这意味着为了达到相同的精度, 低阶元必须要在很细的网格上离散. 因此支持多边形网格和可能的任意阶的离散化方法在过去的十年中经历了蓬勃发展. 其中很多新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
 
 Due to the complex geometry of free flow and porous media, the interface of the coupled problem also has irregular shape. In practice, it is very difficult to get the mesh matching at the interface, so this paper adopts a numerical method to support arbitrary polygon mesh. In addition, under the same mesh size, the higher-order element can achieve higher accuracy. Therefore, it is necessary to support The discretization method with polyhedral mesh and possible arbitrary order has experienced vigorous development in the past ten years. New design and analysis methods have been developed or rediscovered. They draw on the ideas of other mathematical branches (such as topology and geometry), or expand the original ideas of finite element or finite volume method.
 
