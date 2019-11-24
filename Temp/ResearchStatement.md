@@ -6,19 +6,19 @@ The main research of this thesis is the numerical simulation and theoretical ana
 
 
 
-由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状. 实践中得到在界面处匹配的的网格剖分是很困难的, 而多边形网格可以很好的解决这一问题, 所以本文采用了支持多边形网格的数值算法. 另外, 在保持数值格式和网格尺寸不变的情况下, 高阶元可以达到更高的精度, 这意味着为了达到相同的精度, 低阶元必须要在很细的网格上离散. 因此支持多边形网格和可能的任意阶的离散化方法在过去的十年中经历了蓬勃发展. 其中很多新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
+由于自由流和多孔介质区域通常有复杂的几何形状, 使得耦合问题的交界面也具有不规则形状. 实践中得到在界面处匹配的的网格剖分是很困难的, 而多边形网格可以很好的解决这一问题, 所以本文采用了支持多边形网格的数值算法. 另外, 在保持数值格式和网格尺寸不变的情况下, 高阶元可以达到更高的精度, 可以更好的逼近所求问题. 因此支持多边形网格和可能的任意阶的离散化方法是本文的研究方向, 并在过去的几年中经历了蓬勃的发展. 其中很多新的设计和分析方法已经被开发或重新发现, 它们借鉴了其他数学分支的思想 (如拓扑学和几何学), 或者扩展了有限元或有限体积法的原始思想.
 
 Due to the complex geometry of free flow and porous media, the interface of the coupled problem also has irregular shape. In practice, it is very difficult to get the mesh matching at the interface, so this paper adopts a numerical method to support arbitrary polygon mesh. In addition, under the same mesh size, the higher-order element can achieve higher accuracy. Therefore, it is necessary to support The discretization method with polyhedral mesh and possible arbitrary order has experienced vigorous development in the past ten years. New design and analysis methods have been developed or rediscovered. They draw on the ideas of other mathematical branches (such as topology and geometry), or expand the original ideas of finite element or finite volume method.
 
 
 
-本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来研究上述流体方程. 因为所研究的数值逼近基于分片多项式, 所以我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 由于 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯形网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我们统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力的最优 $ L^2 $ 误差估计.
+本文主要采用间断 Galerkin (discontinuous Galerkin, DG) 和杂交高阶 (hybrid high-order method, HHO) 两种方法来数值离散上述流体方程. 首先我们从经典的内部加罚 (interior penalty, IP) DG 方法开始研究. 由于 DG 方法的基函数是采用的分片多项式, 所以其格式可以不受单纯形网格的限制, 经过近几年的发展, 支持任意多边形网格的 DG 方法在理论上逐渐完善. 在此基础上, 将 DG 格式应用到带有阻尼项的 Stokes 问题中, 在该格式中我们采用了 $ \mathbb P_k^d-\mathbb P_k $ 等阶元来离散速度和压力 (本文中取 $ d=2 $). 我们统一分析了离散问题的对称, 非对称和不完全对称三种格式的适定性, 并给出了关于速度的最优 $ H^1 $ 误差估计, 以及关于压力的最优 $ L^2 $ 误差估计.
 
 In this thesis, the discontinuous Galerkin (DG) method and hybrid high-order (HHO) method are used to study the above-mentioned fluid equations. Because the numerical approximations are based on piecewise polynomials, we start from the classical interior penalty (IP) DG method. Since the basis functions of DG method are piecewise polynomials, its scheme cannot be restricted by the simplex meshes. After the development in recent years, the DG method supporting polygon meshes is gradually improved in theories. Based on these theories, the DG method is applied to Stokes problem with damping term. In this scheme, we use the equal order element $ \mathbb P_k^d-\mathbb P_k $ to discrete the velocity and pressure ($ d = 2 $ in this thesis). We analyze the well posedness of symmetric, asymmetric and incompletely symmetric schemes for the discrete problem, and give the optimal $ H^1 $ error estimates for velocity and the optimal $ L^2 $ error estimates for pressure.
 
 
 
-DG 的优点很明显, 但其仍有不少难以避免的缺点, 其中最主要的是其自由度多, 这对求解最后代数方程组带来很大困难, 以及其双线性形式的强制性依赖于充分大的惩罚参数. 2009 年, Cockburn 等人针对二阶椭圆边值问题提出了杂交有限元方法的一致框架, 其中杂交间断 Galerkin (hybrid discontinuous Galerkin, HDG) 方法保持了 DG 方法的优点, 还克服了 DG 方法的缺点. 虽然大多数文献关注于标准网格, 但在近来, HDG 方法已经扩展到更一般的多边形网格上 []. 同样适用于一般多边形网格的高阶数值方法还有: 弱 Galerkin (weak Galerkin, WG) 方法, 虚单元法 (virtual element method, VEM), 杂交高阶 (hybrid high-order, HHO) 方法等. 类似于 [] 中经典混合有限元, HDG 中的另一个经常性的研究课题是研究变量的超逼近性. 这一点, HHO 方法带来了两个重要的优点. 首先, 在方法的公式中加入了局部的重构, 而不是用于后处理; 其次, 在局部建立了更高阶的稳定项. 因此, HHO 方法中变量的超逼近是内在的. 
+DG 方法具有局部质量守恒, 支持多边形网格和易于 $ hp $ 自适应等优点, 但其仍有难以避免的缺点, 其中最主要的是其自由度多, 这对求解最后代数方程组带来很大困难, 以及其双线性形式的强制性依赖于充分大的惩罚参数. 2009 年, Cockburn 等人针对二阶椭圆边值问题提出了杂交有限元方法的一致框架, 其中杂交间断 Galerkin (hybrid discontinuous Galerkin, HDG) 方法保持了 DG 方法的优点, 还克服了 DG 方法的缺点. 针对 HDG 方法, 虽然大多数文献关注于标准网格, 但在近来, 该方法已经扩展到更一般的多边形网格上 [1]. 同样适用于一般多边形网格的高阶数值方法还有: 弱 Galerkin (weak Galerkin, WG) 方法, 虚单元法 (virtual element method, VEM), 杂交高阶 (hybrid high-order, HHO) 方法等. HDG 方法中的另一个经常性的研究课题是研究变量的超逼近性, 其动机是与文献[2]中指出的经典混合有限元进行类比. 针对这一点, HHO 方法引入了两个重要的概念, 首先, 在方法的公式中加入了局部的重构, 而不是用于后处理; 其次, 在局部建立了更高阶的稳定项. 得益于两项构造的数值格式, HHO 方法中变量的超逼近是内在的. 
 
 
 
@@ -26,11 +26,18 @@ DG 的优点很明显, 但其仍有不少难以避免的缺点, 其中最主要�
 
 
 
-首先考虑第一种模型. 在自由流区域, 使用 Laplace 形式的 Stokes 方程; 在多孔介质区域, 速度和压力两个变量以混合一阶形式给出. 采用分片 $ (\mathbb P_k(\mathcal T_h)^d, \mathbb P_k(\mathcal F_h)^d)\times \mathbb P_k(\mathcal T_h) $ $ (k\geq 0) $ 多项式离散整体的速度和压力, 交界面处速度的法向连续性被强制在离散空间中. HHO 方法中, 对梯度和散度算子需要进行重构, 利用重构算子得到最终的离散格式, 并利用鞍点理论证明了离散问题的适定性. 给出了能量范数下的误差分析, 并用数值实验验证了误差分析中的收敛阶以及 HHO 方法的优点. 对于第二种模型, 在自由流区域, Stokes 方程以应力张量的形式给出, 多孔介质区域中块区域的 Darcy 方程以混合一阶形式给出, 裂缝的 Darcy 方程使用关于压力的二阶椭圆方程. 为了简化模型, 裂缝的 Darcy 方程的边界并不出现在 Stokes 方程和 Darcy 方程的耦合边界上. 针对张量形式的 Stokes 方程, 需要引入向量场梯度的对称部分和反对称部分, 同时, 在局部重构对称梯度算子时要求多项式次数 $ k \geq 1 $. 同第一个模型, 理论分析给出了耦合问题的能量范数下的误差估计. 目前在推导 Stokes-Darcy 耦合问题的速度的最优 $ L^2 $ 误差估计时仍存在一定的困难, 文章 [], [] 中借助标准网格上的 RT 插值算子给出了 DG 和 HDG 方法的最优 $ L^2 $ 误差估计, 如何将此估计推广到 HHO 方法上将会是一个有意义的工作.
+首先考虑第一种模型. 在自由流区域, 使用 Laplace 形式的 Stokes 方程; 在多孔介质区域, 速度和压力两个变量以混合一阶形式给出. 采用分片 $ (\mathbb P_k(\mathcal T_h)^d, \mathbb P_k(\mathcal F_h)^d)\times \mathbb P_k(\mathcal T_h) $ $ (k\geq 0) $ 多项式离散整体的速度和压力, 交界面处速度的法向连续性被强制在离散空间中. HHO 方法中, 对梯度和散度算子需要进行重构, 利用重构算子得到最终的离散格式, 并利用鞍点理论证明了离散问题的适定性. 给出了能量范数下的误差分析, 并用数值实验验证了误差分析中的收敛阶以及 HHO 方法的优点. 对于第二种模型, 在自由流区域, Stokes 方程以应力张量的形式给出, 多孔介质区域中块区域的 Darcy 方程以混合一阶形式给出, 裂缝的 Darcy 方程使用关于压力的二阶椭圆方程. 为了简单, 我们设定裂缝的 Darcy 方程的边界并不出现在 Stokes 方程和 Darcy 方程的耦合边界上. 针对张量形式的 Stokes 方程, 需要引入向量场梯度的对称部分和反对称部分, 同时, 在局部重构对称梯度算子时要求多项式次数 $ k \geq 1 $. 同第一个模型, 理论分析给出了耦合问题的能量范数下的误差估计. 目前在推导 Stokes-Darcy 耦合问题的速度的最优 $ L^2 $ 误差估计时仍存在一定的困难, 文章 [3] 和 [4] 中借助标准网格上的 RT 插值算子给出了 DG 和 HDG 方法求解 Stokes-Darcy 耦合问题的最优 $ L^2 $ 误差估计, 如何将此估计推广到 HHO 方法上将会是一个有意义的工作.
 
+ 
 
+以上模型的自由流区域考虑的都是牛顿流体 (即粘度是恒定的常数), 接下来我们尝试用 HHO 方法求解一类拟牛顿流体问题, 拟牛顿流体是对复杂流体 (非牛顿流体) 的一种简单近似. 其中复杂流体是指粘度是非恒定的一类流体 (实验测量表明, 粘度随形变速率的变化而变化), 这类流体在现实生活中广泛存在, 例如水泥, 牙膏, 血液等糊状物或聚合物溶液都是复杂流体. 描述复杂流体最简单的方法是绘制粘度测量值与外加剪切速率的关系图, 即, 通过调整一些参数, 再用简单的函数拟合得到粘度与剪切速率的曲线图. 这也是刻画拟牛顿流体模型的主要思想. 在此模型中, Stokes 方程采用应力张量形式, 令 $ |\nabla_s\pmb u| $ 表示剪切速率, 粘度函数则由非线性函数 $\mu(|\nabla_s \pmb u |)$ 给出, 并且要求 $ \mu $ 满足一定的正则性条件. 此处考虑了两种经典的粘度函数: power law 粘度函数和 Carreau’s law 粘度函数. 数值离散时利用 HHO 方法重构了梯度和散度算子, 以及采用了经典的 Picard 来处理非线性项. 针对离散系统, 我们给出了 HHO 方法的静力凝聚法, 并给出了速度和压力的在能量范数下的最优误差估计. 
 
-以上模型的自由流区域考虑的都是牛顿流体 (即粘度是恒定的常数), 接下来我们尝试用 HHO 方法求解一类拟牛顿流体问题. 拟牛顿流体是对复杂流体 (非牛顿流体) 的一种简单近似. 复杂流体是指粘度是非恒定的一类流体 (实验测量表明, 粘度随形变速率的变化而变化), 这类流体在现实生活中广泛存在, 例如水泥, 牙膏, 血液等糊状物或聚合物溶液都是复杂流体. 描述复杂流体最简单的方法是绘制粘度测量值与外加剪切速率的关系图, 然后通过调整一些参数, 再用简单的函数拟合得到粘度与剪切速率的曲线图. 这也是拟牛顿流体模型的主要思想. 令 $ |\nabla_s\pmb u| $ 表示剪切速率, 粘度函数由非线性函数 $\mu(|\nabla_s \pmb u |)$ 给出, 并且满足一定的正则性条件. 此处考虑两种经典的粘度函数: power law 粘度函数和 Carreau’s law 粘度函数. 数值离散时利用 HHO 方法重构了梯度和散度算子, 给出了速度和压力的最优误差估计. 
+---
+
+1. Cockburn, B., Di Pietro, D. A., & Ern, A. (2016). Bridging the  hybrid high-order and hybridizable discontinuous Galerkin methods. *ESAIM: Mathematical Modelling and Numerical Analysis*, *50*(3), 635-650.
+2. Cockburn, B., Gopalakrishnan, J., & Lazarov, R. (2009). Unified  hybridization of discontinuous Galerkin, mixed, and continuous Galerkin  methods for second order elliptic problems. *SIAM Journal on Numerical Analysis*, *47*(2), 1319-1365.
+3. Girault, V., Kanschat, G., & Rivière, B. (2014). Error analysis for a monolithic discretization of coupled Darcy and Stokes problems. *Journal of Numerical Mathematics*, *22*(2), 109-142.
+4. Cesmelioglu, A., Rhebergen, S., & Wells, G. N. (2020). An  embedded–hybridized discontinuous Galerkin method for the coupled  Stokes–Darcy system. *Journal of Computational and Applied Mathematics*, *367*, 112476.
 
 
 
