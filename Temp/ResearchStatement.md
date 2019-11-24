@@ -18,7 +18,7 @@ In this thesis, the discontinuous Galerkin (DG) method and hybrid high-order (HH
 
 
 
-DG 的优点很明显, 但其仍有不少难以避免的缺点, 其中最主要的是其自由度多, 这对求解最后代数方程组带来很大困难, 以及其双线性形式的强制性依赖于充分大的惩罚参数. 2009 年, Cockburn 等人针对二阶椭圆边值问题提出了杂交有限元方法的一致框架, 其中杂交间断 Galerkin (hybrid discontinuous Galerkin, HDG) 方法保持了 DG 方法的优点, 还克服了 DG 方法的缺点. 虽然大多数文献关注于标准网格, 但在近来, HDG 方法已经扩展到更一般的多边形网格上 []. 同样适用于一般多边形网格的高阶数值方法还有: 弱 Galerkin (weak Galerkin, WG) 方法, 虚单元法 (virtual element method, VEM), 杂交高阶 (hybrid high-order, HHO) 方法等. 类似于 [] 中经典混合有限元, HDG 中的另一个经常性的研究课题是研究变量的超逼近性. 这一点, HHO 方法带来了两个重要的概念性进展. 首先, 在方法的公式中加入了局部的重构, 而不是用于后处理; 其次, 在局部建立了更高阶的稳定项. 因此, HHO 方法中变量的超逼近是内在的. 
+DG 的优点很明显, 但其仍有不少难以避免的缺点, 其中最主要的是其自由度多, 这对求解最后代数方程组带来很大困难, 以及其双线性形式的强制性依赖于充分大的惩罚参数. 2009 年, Cockburn 等人针对二阶椭圆边值问题提出了杂交有限元方法的一致框架, 其中杂交间断 Galerkin (hybrid discontinuous Galerkin, HDG) 方法保持了 DG 方法的优点, 还克服了 DG 方法的缺点. 虽然大多数文献关注于标准网格, 但在近来, HDG 方法已经扩展到更一般的多边形网格上 []. 同样适用于一般多边形网格的高阶数值方法还有: 弱 Galerkin (weak Galerkin, WG) 方法, 虚单元法 (virtual element method, VEM), 杂交高阶 (hybrid high-order, HHO) 方法等. 类似于 [] 中经典混合有限元, HDG 中的另一个经常性的研究课题是研究变量的超逼近性. 这一点, HHO 方法带来了两个重要的优点. 首先, 在方法的公式中加入了局部的重构, 而不是用于后处理; 其次, 在局部建立了更高阶的稳定项. 因此, HHO 方法中变量的超逼近是内在的. 
 
 
 
