@@ -21,7 +21,7 @@
 
   
 
-- In 2D, 
+- In 2D, (Refer Long_lectures: **MACStokes.pdf**)
 
   Besides the gradient and divergence operator, we will use two more differential operators $$\rm curl$$ and $$\rm rot$$ in $$\mathbb R^2$$. The $$\rm curl$$ operator is unambiguously defined for a 3D vector fields $$\pmb v$$ and the result $${\rm curl}\, \pmb v$$ is still a 3D vector field. When restricted to 2D, we have two variants. 
 
@@ -42,5 +42,27 @@
 
 ---
 
-
-
+The finite element spaces are related by the de Rham complex: (see, NGSolve Tutorial [*H(curl)* and *H(div)* function spaces](https://ngsolve.org/docu/latest/i-tutorials/unit-2.3-hcurlhdiv/hcurlhdiv.html)) 
+$$
+\begin{split}\DeclareMathOperator{\Grad}{grad}
+\DeclareMathOperator{\Curl}{curl}
+\DeclareMathOperator{\Div}{div}
+\begin{array}{ccccccc}
+H^1      &  \stackrel{\Grad}{\longrightarrow}          &
+H(\Curl) &  \stackrel{\Curl}{\longrightarrow}   &
+H(\Div)  &  \stackrel{\Div}{\longrightarrow}    &
+L^2                                                                                    \\[8pt]
+\bigcup  &                  &
+\bigcup  &                  &
+\bigcup  &                  &
+\bigcup                              \\[8pt]
+ W_{h}                   &
+\stackrel{\Grad}{\longrightarrow}          &
+ V_{h }       &
+ \stackrel{\Curl}{\longrightarrow}   &
+ Q_{h}          &
+\stackrel{\Div}{\longrightarrow}    &
+S_{h}  \:
+ \\[3ex]
+\end{array}\end{split}
+$$
