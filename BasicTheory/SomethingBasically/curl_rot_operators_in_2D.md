@@ -39,6 +39,10 @@
   $$
   {\rm curl}\, f = ({\rm grad}\,f)^{\perp}, \quad {\rm rot}\, \pmb v = {\rm div}(\pmb v^{\perp}).
   $$
+  
+  The clockwise: $(u_1,u_2)\rightarrow (u_2, -u_1)$. 
+  
+  The anticlockwise: $(u_1,u_2)\rightarrow (-u_2, u_1)$. 
 
 ---
 
