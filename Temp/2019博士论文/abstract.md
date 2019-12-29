@@ -4,3 +4,18 @@ The support of polytopal meshes is perhaps the most defining feature of HHO meth
 
 ---
 
+本论文的研究内容是流体流动的高阶间断有限元方法的数值模拟和理论分析. 流体流动的区域分为自由流区域和多孔介质区域, 其中自由流区域考虑 Stokes 方程、带阻尼项 Stokes 方程和拟牛顿 Stokes 方程, 多孔介质区域考虑 Darcy 方程. 并且将主要探讨三类问题, 分别是由带阻尼项 Stokes 方程描述的受阻尼作用影响的流体问题, Stokes-Darcy 方程描述的自由流和多孔介质流耦合问题和拟牛顿 Stokes 方程描述的复杂流体问题. 
+
+This dissertation presents the numerical simulation and theoretical analysis of the high-order discontinuous finite element method for fluid flow. The region of fluid flow is divided into the free fluid region and the porous media region, where the Stokes equation, the Stokes equation with damping term and the quasi-Newtonian Stokes equation are considered in the free fluid region, and the Darcy equation is considered in the porous media region. Three types of flow models will be mainly discussed, namely, the fluid flow affected by damping described by the Stokes equation with damping term, the problem of coupled free fluid and porous media flow described by the Stokes-Darcy equation and the complex fluid problem governed by the quasi-Newtonian Stokes equation.
+
+本论文用到数值方法为间断 Galerkin (discontinuous Galerkin, DG) 方法和杂交高阶 (hybrid high-order method, HHO) 方法. 这两种方法的离散空间采用分片多项式, 多项式可以取任意阶; 离散格式可以处理一般形状的网格, 并严格保持局部质量守恒. 之所以采用这两种数值方法是因为其满足如下几方面要求: (1), 对于流体区域中的一块局部区域, 流体流入的质量等于流出的质量, 即保持局部质量守恒. (2), 自由流区域和多孔介质区域通常有复杂的几何形状, 传统上, 需要用尺寸很小的单纯形网格来精确地捕捉几何结构, 但这大大增加了计算量. 而使用一般形状网格, 可以将几何特征合并到较大的多边形 (或多面体) 网格中, 从而在不降低精度的情况下降低计算成本. (3), 当网格尺寸和数值格式不变的情况下, 高阶元可以达到更高的精度, 可以更好的逼近所求问题. 
+
+The numerical methods used in this dissertation are the discontinuous Galerkin (DG) method and the hybrid high-order method (HHO) method.The discrete space of these two methods uses piecewise polynomials, and the polynomials can take any order; the discrete scheme can handle general-shaped meshes and strictly maintain local mass conservation. The reason why these two numerical methods are adopted is that they meet the following requirements: (1) For a local area in the fluid region, the mass of fluid inflow is equal to the mass of outflow, that is to keep the local mass conservation. (2) The free flow region and porous media region usually have complex geometry. Capturing geometric microstructures in the domain traditionally requires the use of small elements, which can significantly add to the computational burden. With polyhedral meshes, one can incorporate such geometric features into larger agglomerated elements, thus achieving a significant cost reduction without compromising the accuracy. (3) When the mesh size and numerical format remain unchanged, the higher-order element can achieve higher accuracy and better approach to the problem.
+
+
+
+This dissertation begins with the classic interior penalty (IP) DG method.
+
+
+
+最后, 应用 HHO 方法求解一类拟牛顿流体问题. 拟牛顿流体是对复杂流体 (非牛顿流体, 即粘度不是恒定的常数) 的一种简单近似. 在此模型中, Stokes 方程采用 Cauchy 应力张量形式, 令 $ |\nabla_s\bm{u}| $ 表示剪切速率, 粘度函数则由非线性函数 $ \nu(|\nabla_s \bm{u} |) $ 给出, 并且要求 $ \nu $ 满足一定的正则性条件. 此处考虑了两种经典的粘度函数: 幂律 (power law) 粘度函数和 Carreau's law 粘度函数. 数值离散时利用 HHO 方法重构了梯度和散度算子, 以及采用了经典的 Picard 来处理非线性项. 针对离散的代数系统, 给出了 HHO 方法的静力凝聚方法, 并证明了静力凝聚方法的唯一可解性. 接着给出了速度和压力的在能量范数下的最优误差估计和相应的数值算例.
