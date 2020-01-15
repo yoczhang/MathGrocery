@@ -72,3 +72,7 @@
 
 ### [17. What is the difference between ndarray and array in numpy?](subLearningPy/17.md)
 
+---
+
+### [18.Python 中的比较: is 与 ==](subLearningPy/18.md)
+
