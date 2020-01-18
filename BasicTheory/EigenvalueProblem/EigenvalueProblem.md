@@ -47,7 +47,7 @@ An important tool for the analysis of (2.2) is the solution operator $T: H\right
 $$
 a(Tf, v) = (f, v)\quad \forall v\in V. \tag{2.3}
 $$
-Since we are interested in compact eigenvalue problems, we make the assumption that
+Since we are interested in *compact* eigenvalue problems, we make the assumption that
 $$
 T: H\rightarrow H \quad \text{ is a compact operator},
 $$
