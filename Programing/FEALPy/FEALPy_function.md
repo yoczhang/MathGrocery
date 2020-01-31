@@ -4,8 +4,13 @@ import numpy as np
 
 class Function(np.ndarray):
     def __new__(cls, space, dim=None, array=None):
+      	# 这里 space 指的就是之前构建的 '空间类' 所创建的对象,
+        # (例如: space = ScaledMonomialSpace2d(mesh, p))
         if array is None:
             self = space.array(dim=dim).view(cls)
+            # 例如: space = ScaledMonomialSpace2d(mesh, p),
+            # 则, 由 ScaledMonomialSpace2d() 中有如下
+            # def array(self, dim=None): ...
         else:
             self = array.view(cls)
         self.space = space
