@@ -76,3 +76,7 @@
 
 ### [18.Python 中的比较: is 与 ==](subLearningPy/18.md)
 
+---
+
+### [19.numpy 中 transpose 和 swapaxes 函数讲解](subLearningPy/19.md)
+
