@@ -54,10 +54,12 @@ In the `LagrangeFiniteElementSpace.py`, defined the `grad_basis()` function whic
 In mesh structure
 
 - `edge2cell` is the $NE\times 4$ array
-  - `edge2cell[i,0]` 和 `edge2cell[i,1]` 分别存储第 $i$ 条边左右两个单元的全局编号 (即对应 `cell` 数组中的行号)
+  - `edge2cell[i,0]` 和 `edge2cell[i,1]` 分别存储第 $i$ 条边左右两个单元的全局编号 (即对应 `cell` 数组中的行号), 并且有 `edge2cell[i,0]`$\leq$`edge2cell[i,1]`.
   - `edge2cell[i,2]` 和 `edge2cell[i,3]` 分别存储第 $i$ 条边在左右两个单元中的局部编号
   - 如果是边界边, 则
     - `edge2cell[i,0] = edge2cell[i,1]` 
     - `edge2cell[i,2] = edge2cell[i,3]` 
-- 
+- `nm = mesh.edge_normal()`  
+  - 这给出了 edge 上的法向量, 但是 `nm` 长度并不是 1, 而是相应的 edge 的长度, 
+  - 并且方向是从 `edge2cell[i,0]` 指向 `edge2cell[i,1]` (即从编号小的单元指向编号大的单元)
 
