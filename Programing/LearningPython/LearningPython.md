@@ -38,7 +38,7 @@
 
 ---
 
-### [9. Numpy.ufunc.accumulate()](subLearningPy/9.md)
+### [9. Numpy.ufunc.accumulate(), Numpy.ufunc.at()](subLearningPy/9.md)
 
 ---
 
