@@ -80,3 +80,6 @@
 
 ### [19.numpy 中 transpose 和 swapaxes 函数讲解](subLearningPy/19.md)
 
+---
+
+### [20. numpy 中 一种矩阵的取法](subLearningPy/20.md)
