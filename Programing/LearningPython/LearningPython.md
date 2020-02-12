@@ -83,3 +83,8 @@
 ---
 
 ### [20. numpy 中 一种矩阵的取法](subLearningPy/20.md)
+
+---
+
+### [21. numpy.split, numpy.hsplit, numpy.vsplit](subLearningPy/21.md)
+
