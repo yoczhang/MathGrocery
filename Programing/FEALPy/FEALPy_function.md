@@ -1,6 +1,27 @@
+#### 这里介绍 FEALPy 中关于 `class Function()`. 
+
+
+
+首先看下如何调用 `class Function()` 的 (一般都在例如 `LagrangeFiniteElementSpace.py` 函数中). 
+
+```python
+class LagrangeFiniteElementSpace():
+  ...
+  ...
+  
+	def function(self, dim=None, array=None):
+		f = Function(self, dim=dim, array=array)
+		return f
+  
+  ...
+```
+
+
+
+其次我们看下 `class Function()` 的定义, 其中用到了 `__new__` 来定义一个新类, 关于 `__new__` 的用法可以再查查, 这里只做一些解释, 结合上面调用的方式, 这里==初始化参数== `space` 就是上面调用中的 `self`, 也就是将上面 `class LagrangeFiniteElementSpace()` 这个类本身传递到了 `class Function()` 中. 这样就比较容易理解 `class Function()` 了.
+
 ```python
 import numpy as np
-
 
 class Function(np.ndarray):
     def __new__(cls, space, dim=None, array=None):
