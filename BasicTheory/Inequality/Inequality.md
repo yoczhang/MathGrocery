@@ -1,3 +1,5 @@
+
+
 # Inequality
 
 ---
@@ -64,7 +66,12 @@ $$
     $$
     
 
+  - From[^2016]
+
+    ![2016 Poincare inequality](/Users/yczhang/Documents/MathGrocery/BasicTheory/Inequality/2016 Poincare inequality.png)
+
   [^2007_1]: 2007 The Mathematical Theory of Finite Element Methods Third Edition.pdf
   [^2007_2]: 2007 (王烈衡-许学军) 有限元方法的数学基础.pdf
+  [^2016]: 2016 (Volker John) Finite element methods for incompressible flow problems.pdf
 
 - Discontinuous Poincare inequality
