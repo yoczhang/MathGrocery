@@ -66,7 +66,7 @@
 
 ### 2004 Theory and Practice of Finite Elements (Alexandre Ern)
 
-- 仔细阅读第一章 `Chapter 1. Finite Element Interpolation` 介绍了各种有限元空间 (such as: CR, RT, Nedelec), 以及各种插值 (such as: Scott-Zhang interpolation). 
+- 仔细阅读第一章 `Chapter 1. Finite Element Interpolation` 介绍了各种有限元空间 (such as: CR, RT, Nedelec), 以及各种插值 (such as: Clement interpolation, Scott-Zhang interpolation). 
 
 
 
