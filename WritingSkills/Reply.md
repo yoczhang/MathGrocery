@@ -17,7 +17,7 @@ Sorry for the late reply to you. This is an excellent work for the non-Newtonian
 
 2. P3: Third to last line. (3c)-(3d) ---> (3c)$-$(3d).
 
-3. P8: The last senctence in the proof of Lemma 8. It is mentioned that the first term in (18) is bounded by the discrete Sobolev embedding of [17, prop 5.4]. This confused me, you know, in [17, prop 5.4], one can only get $||v_h|| \leq c (\sum_{T\in Th} (||\nabla v_T||_{L^r(T)}^r + \sum_{F}h_F^{1-r}||v_F-v_T||_{L^r(F)^r}))^{1/r}$, however, how to get $||v_h|| \leq c (\sum_{T\in Th} (||\nabla_s v_T||_{L^r(T)}^r + \sum_{F}h_F^{1-r}||v_F-v_T||_{L^r(F)^r}))^{1/r}$ for $v_h=\sum_{T\in Th} v_T$ without the homogeneous Dirichlet B.C.
+3. P8: The last senctence in the proof of Lemma 8. It is mentioned that the first term in (18) is bounded by the discrete Sobolev embedding of [17, prop 5.4]. This confused me, you know, in [17, prop 5.4], one can only get $||v_h|| \leq c (\sum_{T\in Th} (||\nabla v_T||_{L^r(T)}^r + \sum_{F}h_F^{1-r}||v_F-v_T||_{L^r(F)^r}))^{1/r}$, however, how to get $||v_h|| \leq c (\sum_{T\in Th} (||\nabla_s v_T||_{L^r(T)}^r + \sum_{F}h_F^{1-r}||v_F-v_T||_{L^r(F)^r}))^{1/r}$ for $v_h=\sum_{T\in Th} v_T$ without the homogeneous Dirichlet B.C., or maybe I missed something important for my derivation.
 
     
 
