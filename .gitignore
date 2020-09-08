@@ -30,3 +30,29 @@ book.epub
 book.mobi
 
 Temp/
+
+# To ignore the auxiliary files in latex
+*.syn*
+*.log
+*.aux
+*.dvi
+*.lof
+*.lot
+*.bit
+*.idx
+*.glo
+*.bbl
+*.bcf
+*.ilg
+*.thm
+*.toc
+*.toe
+*.ind
+*.out
+*.blg
+*.fdb_latexmk
+*.fls
+*.gz
+*.spl
+*.bat
+
