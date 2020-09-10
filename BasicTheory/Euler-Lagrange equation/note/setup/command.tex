@@ -1,0 +1,53 @@
+% --- my command --- %
+
+%----------------------------------%
+%------- define new commmads -------%
+\newcommand*{\snorm}[1]{\lvert #1 \rvert} % the seminorm norm: |..|
+\newcommand*{\dnorm}[1]{\lVert #1\rVert} % the double norm: ||..||
+\newcommand*{\tnorm}[1]{\interleave#1\interleave} % the triple norm: |||..|||
+\newcommand*{\anglebrackets}[1]{\langle#1\rangle} % the angle brackets: <...>
+\newcommand*{\jump}[1]{\llbracket #1\rrbracket} % the vector jump brackets: [[...]]
+\newcommand*{\hhoVecvars}[1]{\underline{\bm{#1}}}
+\newcommand*{\hhoScalvars}[1]{\underline{{#1}}}
+\newcommand*{\hhonormalvec}[1]{ \bm{n}_{_{#1} } }
+\newcommand*{\divOperator}[1]{\text{\rm{div} \hspace{-0.5mm}}{#1}}
+\newcommand*{\DivOperator}[1]{\text{\rm{div} \hspace{-0.5mm}}{#1}}
+\newcommand*{\divtau}[1]{\text{div$ _{\tau} $ \hspace{-0.5mm}}{#1}}
+\newcommand*{\divVecOperator}[1]{\text{\textbf{div} \hspace{-0.5mm}}{#1}}
+\newcommand*{\DivOperatorVec}[1]{\text{\textbf{div} \hspace{-0.5mm}}{#1}}
+\newcommand{\transpose}{\intercal} % the transpose sign
+\newcommand{\realR}{\ensuremath{\mathbb{R}}}
+\newcommand{\rd}{\ensuremath{\mathbb{R}^d}}
+\newcommand{\gd}{d}  % grid dimension
+\newcommand{\dx}{\ensuremath{{\,\hspace{-0.06em}\rm{d}}\bm{x}}}
+\newcommand{\ds}{\ensuremath{{\,\hspace{-0.06em}\rm{d}}s}}
+\newcommand{\littlequad}{\ensuremath{\,\hspace{-0.08em}}}
+\newcommand{\sqd}[1]{\ensuremath{[{#1}]^d}}  % [square brackets]^d
+\newcommand{\mcalTh}{\mathcal{T}_h}
+\newcommand{\mcalFh}{\mathcal{F}_h}
+\newcommand{\mcalT}{\mathcal{T}}
+\newcommand{\mcalF}{\mathcal{F}}
+\newcommand{\mbbP}{\mathbb{P}}
+\newcommand{\matvar}[1]{\ensuremath{\uuline{\bm{#1}}}}
+\newcommand{\botimes}{\ensuremath{\bm{\otimes}}}
+\newcommand{\bcurl}{\ensuremath{{\bf{curl}\hspace{0.1em}}}}
+\newcommand{\identityM}{\ensuremath{{\bf{I}}}}
+\newcommand{\bdeltaT}{\ensuremath{\bm{\delta}_T^k}}
+\newcommand{\bdeltaF}{\ensuremath{\bm{\delta}_{TF}^k}}
+\newcommand{\comment}[1]{\iffalse #1 \fi } 
+
+
+%%--- amsmath - therorm style 
+%\theoremstyle{plain}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{Theorem}{Theorem}[section]
+%\newtheorem{Lemma}[Theorem]{Lemma}
+%\newtheorem{Def}[Theorem]{Definition}
+%\newtheorem{Remark}[Theorem]{Remark}
+%\newtheorem{Exam}{Example}{\normalfont}
+%\newtheorem*{Proof}{Proof} % there is no number behind the proof.
+
+
+%%------- re-define 
+\renewcommand\arraystretch{1.1}
+\renewcommand\proofname{\rm{\textbf{Proof.}}}
