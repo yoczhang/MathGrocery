@@ -96,6 +96,15 @@ Read it! Read it! Read it!
 
 ---
 
+### 2013 Mixed Finite Element Methods and Applications
+
+Located in `/PAPERS/Books/`
+
+> Unfortunately, spaces $H^{1/2}(\partial K)$ and $H^{-1/2}(\partial K)$ with $K$ an element of a partition of $\Omega
+> $ are met very often in the analysis of hybrid and mixed methods and one must be very careful in handling them.
+
+---
+
 ### 2017 (notes) Sobolev spaces
 
 Located in `/PAPERS/0_Read_it_later`.
