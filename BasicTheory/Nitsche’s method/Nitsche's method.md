@@ -28,7 +28,7 @@ $$
 \begin{align}
 (f,v) = (-\Delta u,v) &= (\nabla u, \nabla v) - \int_{\partial \Omega}\partial_{\nu}uv\,ds \\
 &= (\nabla u,\nabla v) - \int_{\partial \Omega}\partial_{\nu}uv\,ds - \int_{\partial \Omega}(u-g)\partial_{\nu}v\,ds
-\end{align}
+\end{align} \tag{2}
 $$
 where in the last equation we have added the productive zero $0=u-g$ on the boundary.
 
@@ -39,7 +39,7 @@ $$
 \begin{align}
 &(\nabla u,\nabla v) - \int_{\partial \Omega}\partial_{\nu}uv\,ds - \int_{\partial \Omega}u\partial_{\nu}v\,ds + \eta\int_{\partial \Omega}uv\,ds \\
 &= \int_{\Omega}fv\,dx - \int_{\partial \Omega}g\partial_{\nu}v\,ds + \eta \int_{\partial \Omega}gv\,ds \qquad \text{for all}\quad v\in H^1(\Omega).
-\end{align}
+\end{align} \tag{3}
 $$
 Taking instead of $u,v\in H^1(\Omega)$ discrete approximations $u_h,v_h\in V_h\subset H^1(\Omega)$ yields the usual Galerkin approximation. Note that since it's non-conforming due to the boundary conditions (we are looking for the discrete solution in a space that is larger than the one we sought the continuous solution in $H^1_g(\Omega):=\{v\in H^1(\Omega)| v|_{\partial\Omega}=g \}$), one cannot deduce well-posedness of the discrete problem from that of the continuous problem. Nitsche now showed that if $\eta$ is chosen as $ch^{-1}$ for $c>0$ sufficiently large, the discrete problem is in fact stable (with respect to a suitable mesh-dependent norm).
 
