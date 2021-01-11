@@ -111,17 +111,17 @@ Ref Long Chen'notes: MACStokes.pdf (Sec. Differential operators in two dimension
     $$
     {\rm curl }\, \phi = (\partial_y\phi, -\partial_x \phi).
     $$
-    
+  
 - For a 2D vector field $$\pmb v = (v_1(x,y),v_2(x,y))$$, treating as $$(v_1,v_2,0)$$ and taking $$\rm curl$$, we get a 3D vector with only nonzero component in the third coordinate and thus can be identified as a scalar
     $$
     {\rm rot}\, \pmb v = \partial_x v_2 - \partial_y v_1.
     $$
-  
+
 In 2D, if we introduce the clockwise $$90^\circ$$ rotation and use $$\perp$$ in the superscript to denote this rotation, then
-  $$
+$$
   {\rm curl}\, f = ({\rm grad}\,f)^{\perp}, \quad {\rm rot}\, \pmb v = {\rm div}(\pmb v^{\perp}).
-  $$
-  
+$$
+
 
 ---
 
