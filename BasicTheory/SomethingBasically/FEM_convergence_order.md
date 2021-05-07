@@ -94,5 +94,63 @@ $$
   $$
   \frac{\log\vert\frac{ e_1}{ e_2}\vert}{\log\vert\frac{ N_1}{ N_2}\vert} \approx -\frac{r}{3}. \tag{4}
   $$
+
+
+
+---
+
+以上是关于有精确解时, 可以得到在==某种范数下==的误差  $e=O(h^r)$, 所以在 $n$ 层网格上 $e_n=O(h_n^r)$, 第 $n+1$ 层网格上 $e_{n+1}=O(h_{n+1}^r)$, 一般设定 $n$ 越大, 网格尺度越小, 即
+$$
+\frac{e_{n}}{e_{n+1}} = (\frac{h_n}{h_{n+1}})^r \ \Rightarrow \ \frac{\log\vert\frac{ e_{n}}{ e_{n+1}}\vert}{\log\vert\frac{h_{n}}{h_{n+1}}\vert} = r. \tag{5}
+$$
+当没有精确解时, 令 $x_n$ 为第 $n$ 层网格的数值解, $x_{n+1}$ 为第 $n+1$ 层网格的数值解, $x^*$ 为(假设的)真解, 我们有 $e_n = x_n-x^*$, $e_{n+1} = x_{n+1}-x^*$, 且
+$$
+\begin{align}
+&\frac{x_{n+1}-x_n}{x_n-x^*} \\
+&=  \frac{x_{n+1}-x^* + x^*-x_n}{x_n-x^*}  \\
+&= \frac{x_{n+1}-x^*}{x_n-x^*} + \frac{x^*-x_n}{x_n-x^*}\\
+&= (\frac{h_{n+1}}{h_{n}})^r - 1,
+\end{align}
+$$
+因此有 
+$$
+\begin{align}
+ x_{n+1}-x_n = ((\frac{h_{n+1}}{h_{n}})^r - 1) e_n,
+\end{align} \tag{6}
+$$
+同理有 
+$$
+\begin{align}
+ x_{n+2}-x_{n+1} = ((\frac{h_{n+2}}{h_{n+1}})^r - 1) e_{n+1},
+\end{align} \tag{7}
+$$
+则有
+$$
+\begin{align}
+\frac{x_{n+1}-x_n}{x_{n+2}-x_{n+1}} &= \frac{((\frac{h_{n+1}}{h_{n}})^r - 1) e_n}{((\frac{h_{n+2}}{h_{n+1}})^r - 1) e_{n+1}} \\
+&= \frac{h_{n+1}^r-h_{n}^r}{h_{n+2}^r-h_{n+1}^r}.
+\end{align}\tag{8}
+$$
+最后一个等号利用了 $(5)$ 式中的第一个等号.
+
+
+
+其实从 $(8)$ 中可以看出,
+
+- 如果一般的网格在加密时会有: $\frac{h_{n+1}}{h_{n}} = \frac{h_{n+2}}{h_{n+1}}$, 那么此时就有
+  $$
+  \begin{align}
+  &\frac{x_{n+1}-x_n}{x_{n+2}-x_{n+1}} = \frac{e_n}{e_{n+1}}= (\frac{h_{n}}{h_{n+1}})^r \\ 
+  \Rightarrow \ & \frac{\log\vert\frac{x_{n+1}-x_n}{x_{n+2}-x_{n+1}}\vert}{\log\vert\frac{h_{n}}{h_{n+1}}\vert} = r .
+  \end{align}
+  $$
+   
+
+- 如果用自由度 Dof 来计算的话, 需要按照 $(8)$ 式推导一下
+  $$
+  \begin{align}
+  &\frac{e_n}{e_{n+1}}= \frac{x_{n+1}-x_n}{x_{n+2}-x_{n+1}} = ....
+  \end{align}
+  $$
   
 
