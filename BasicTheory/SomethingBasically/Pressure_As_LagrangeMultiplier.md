@@ -1,3 +1,7 @@
+See the paper [2017 (JAA) The Lagrange multiplier and the stationary Stokes equations](./2017 (JAA) The Lagrange multiplier and the stationary Stokes equations.pdf)
+
+---
+
 The original see [Pressure as a Lagrange Multiplier](https://scicomp.stackexchange.com/questions/7474/pressure-as-a-lagrange-multiplier)
 
 ---
