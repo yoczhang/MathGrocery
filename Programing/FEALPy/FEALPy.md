@@ -101,7 +101,6 @@ plt.show()
     + 如果是边界边, 则
         - `edge2cell[i, 0] = edge2cell[i, 1]` 
         - `edge2cell[i, 2] = edge2cell[i, 3]`
-        
 
 **注: `edge` 和 `edge2cell` 可以从 `cell` 中构造出来.**
 
@@ -618,3 +617,4 @@ R[:,1] = Q[:,0]*M[:,1]*Q[:,2]
 R[:,2] = Q[:,0]*Q[:,1]*M[:,2]
 gradphi = np.einsum('ij, kj...->ki...', pp*R, Dlambda) # 爱因斯坦求和 
 ```
+
