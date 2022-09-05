@@ -47,9 +47,7 @@ Some useful sentences in English.
 
 - 2012 Mathematical Aspects of Discontinuous Galerkin Methods.pdf
 
-  - ==To alleviate the notation==, we omit henceforth the trace operator $\gamma$ when writ-
-
-    ing boundary integrals.
+  - ==To alleviate the notation==, we omit henceforth the trace operator $\gamma$ when writing boundary integrals.
 
 #### 3. 滥用记号的描述
 
